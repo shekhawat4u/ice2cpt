@@ -28,6 +28,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap"
   rel="stylesheet">
 
+  
+
 </head>
 
 <body>
@@ -236,6 +238,92 @@
       </div>
     </div>
   </section>
+
+  <section id="countdown" class="text-center my-5">
+    <h2 class="countdown-heading">Countdown of the Conference</h2>
+    <div id="countdown-timer" class="countdown-timer"></div>
+  </section>
+  
+  <style>
+    #countdown {
+      padding: 20px;
+    }
+  
+    .countdown-heading {
+      font-size: 2rem;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 15px;
+    }
+  
+    .countdown-timer {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: darkblue;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    /* Styling for each time unit */
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      min-width: 90px;
+      background: #f9f9f9;
+    }
+  
+    .countdown-unit span {
+      font-size: 1.4rem;
+      color: #555;
+    }
+  
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .countdown-heading {
+        font-size: 1.6rem;
+      }
+  
+      .countdown-timer {
+        font-size: 1.5rem;
+      }
+  
+      .countdown-unit {
+        min-width: 80px;
+        padding: 6px;
+      }
+  
+      .countdown-unit span {
+        font-size: 1.2rem;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .countdown-heading {
+        font-size: 1.4rem;
+      }
+  
+      .countdown-timer {
+        font-size: 1.2rem;
+        gap: 5px;
+      }
+  
+      .countdown-unit {
+        min-width: 70px;
+        padding: 4px;
+      }
+  
+      .countdown-unit span {
+        font-size: 1rem;
+      }
+    }
+  </style>
 
   <section id="service" class="padding-medium">
     <div class="container">
@@ -559,6 +647,30 @@
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date("December 28, 2024 00:00:00").getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+  
+      if (difference < 0) {
+        document.getElementById("countdown-timer").innerHTML = "The date has passed!";
+        return;
+      }
+  
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  
+      document.getElementById("countdown-timer").innerHTML =
+        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+    }
+  
+    setInterval(updateCountdown, 1000);
+  </script>
+
 </body>
 
 </html>
