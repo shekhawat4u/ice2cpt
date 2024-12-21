@@ -98,64 +98,76 @@
             </div>
         </div>
     </nav>
-
-    <!-- Main Contact Container -->
-   <div class="flex flex-col md:flex-row mt-24 justify-center items-center px-5 py-10 gap-8">
-  <!-- Left Section - Contact Information -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-1/2">
-    <div class="bg-teal-500 text-white text-center py-3 text-lg font-semibold sm:hidden">
-        Contact Us
-    </div>
-    <!-- About Us -->
-    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:-translate-y-1 transition-transform duration-300">
-      <i class="fas fa-info-circle text-3xl text-teal-500 mb-3"></i>
-      <h3 class="text-lg font-semibold mb-2">ABOUT US</h3>
-      <p class="text-sm text-gray-600">The NIT Jamshedpur Annual Conference is focused on innovation, collaboration, and knowledge sharing.</p>
-    </div>
-    <!-- Phone -->
-    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:-translate-y-1 transition-transform duration-300">
-      <i class="fas fa-phone text-3xl text-teal-500 mb-3"></i>
-      <h3 class="text-lg font-semibold mb-2">CONTACT NUMBER</h3>
-      <p class="text-sm text-gray-600">+91 9876543210<br>+91 1234567890</p>
-    </div>
-    <!-- Location -->
-    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:-translate-y-1 transition-transform duration-300">
-      <i class="fas fa-map-marker-alt text-3xl text-teal-500 mb-3"></i>
-      <h3 class="text-lg font-semibold mb-2">OUR LOCATION</h3>
-      <p class="text-sm text-gray-600">NIT Jamshedpur<br>Adityapur, Jamshedpur, Jharkhand, India</p>
-    </div>
-    <!-- Email -->
-    <div class="bg-white p-6 rounded-lg shadow-md text-center hover:-translate-y-1 transition-transform duration-300">
-      <i class="fas fa-envelope text-3xl text-teal-500 mb-3"></i>
-      <h3 class="text-lg font-semibold mb-2">EMAIL</h3>
-      <p class="text-sm text-gray-600">conference@nitjsr.ac.in</p>
-    </div>
-  </div>
-
-  <!-- Right Section - Contact Form -->
-  <div class="w-full md:w-1/2 bg-teal-100 p-8 rounded-lg shadow-lg">
-    <h2 class="text-center text-xl font-bold text-gray-800 mb-6">Contact Us</h2>
-    <form action="#">
-      <label for="name" class="block text-sm font-semibold text-gray-600 mb-2">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required
-        class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500">
-
-      <label for="email" class="block text-sm font-semibold text-gray-600 mb-2">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required
-        class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500">
-
-      <label for="message" class="block text-sm font-semibold text-gray-600 mb-2">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here" rows="4" required
-        class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-
-      <button type="submit"
-        class="w-full bg-teal-500 text-white py-3 rounded-lg font-semibold text-lg hover:bg-teal-600 transition duration-300">
-        Submit
-      </button>
-    </form>
-  </div>
-</div>
-
+    <!-- Main Content -->
+    <main class="flex-grow p-10 bg-white">
+        <!-- Welcome Message -->
+        <section class="mb-10 text-center">
+            <h2 class="text-4xl text-blue-500 mb-4 mt-24 font-bold">Welcome!</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                We are thrilled to have your support for the NIT Jamshedpur Conference! Your sponsorship will help us
+                make this event a success while contributing to the growth of innovation and collaboration. Explore the
+                various sponsorship opportunities below.
+            </p>
+        </section>
+    
+        <!-- Technical Sponsorship -->
+        <section class="mb-10 text-center">
+            <h2 class="text-2xl text-blue-500 mb-4">Technical Sponsorship</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                Support the conference with technical resources such as software tools, platform access, hardware
+                devices, and more. Your contribution will enable participants to have hands-on experience during
+                workshops and events.
+            </p>
+        </section>
+    
+        <!-- Financial Sponsorship -->
+        <section class="text-center">
+            <h2 class="text-2xl text-blue-500 mb-4">Financial Sponsorship</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                Help us ensure the smooth functioning of the conference through financial support. Choose from the
+                following sponsorship levels:
+            </p>
+            <div class="flex flex-wrap gap-6 justify-center mt-8">
+                <!-- Gold Sponsorship -->
+                <div class="bg-gray-100 border-2 border-yellow-400 rounded-lg shadow-lg p-6 w-72 text-center">
+                    <h3 class="text-lg bg-yellow-400 text-black py-2 rounded-md">Gold Sponsor</h3>
+                    <p class="text-gray-600 mt-4">
+                        Contribute above ₹5,00,000 and enjoy benefits like:
+                    </p>
+                    <ul class="list-disc text-left text-gray-600 mt-4 pl-6">
+                        <li>Branding on event materials and banners.</li>
+                        <li>Logo featured on the main website.</li>
+                        <li>Priority access to speak during sessions.</li>
+                    </ul>
+                </div>
+    
+                <!-- Silver Sponsorship -->
+                <div class="bg-gray-100 border-2 border-gray-400 rounded-lg shadow-lg p-6 w-72 text-center">
+                    <h3 class="text-lg bg-gray-400 text-black py-2 rounded-md">Silver Sponsor</h3>
+                    <p class="text-gray-600 mt-4">
+                        Contribute ₹3,00,000 - ₹5,00,000 and enjoy benefits like:
+                    </p>
+                    <ul class="list-disc text-left text-gray-600 mt-4 pl-6">
+                        <li>Branding on select event materials.</li>
+                        <li>Logo on the sponsors' page of the website.</li>
+                    </ul>
+                </div>
+    
+                <!-- Bronze Sponsorship -->
+                <div class="bg-gray-100 border-2 border-[#cd7f32] rounded-lg shadow-lg p-6 w-72 text-center">
+                    <h3 class="text-lg bg-[#cd7f32] text-white py-2 rounded-md">Bronze Sponsor</h3>
+                    <p class="text-gray-600 mt-4">
+                        Contribute below ₹3,00,000 and enjoy benefits like:
+                    </p>
+                    <ul class="list-disc text-left text-gray-600 mt-4 pl-6">
+                        <li>Logo featured in thank-you sections.</li>
+                        <li>Social media mentions as a sponsor.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <!-- Footer -->
     <footer id="footer">
         <div class="container padding-medium ">

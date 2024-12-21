@@ -72,13 +72,13 @@ body {
   --bs-btn-font-family: var(--heading-font);
 }
 
-.btn-getstarted{
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all 0.3s ease-in;
-    background-color: #0a1622;
-    color: #fff;
+.btn-getstarted {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+  background-color: #0a1622;
+  color: #fff;
 }
 
 .btn-primary {
@@ -854,7 +854,6 @@ a.course:hover {
 a.course:hover {
   color: var(--accent-color);
 }
-
 
 
 /*---- video section style start ----*/
