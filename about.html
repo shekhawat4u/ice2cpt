@@ -1,366 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About us</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+<html>
 
-  <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    <nav
-      class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4"
-    >
-      <div class="container-fluid">
-        <div class="main-logo">
-          <a href="index.html">
-            <img
-              style="height: 80px"
-              src="images/logo.gif"
-              alt="logo"
-              class="img-fluid"
-            />
-          </a>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-
-          <div class="offcanvas-body justify-content-end">
-            <ul
-              class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0"
-            >
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-2 dropdown-toggle align-items-center"
-                  role="button"
-                  id="pages"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Information of Authors</a
-                >
-                <ul class="dropdown-menu" aria-labelledby="pages">
-                  <li>
-                    <a href="crucialdates.html" class="dropdown-item"
-                      >Crucial Dates</a
-                    >
-                  </li>
-                  <li>
-                    <a href="callforpapers.html" class="dropdown-item"
-                      >Call for Papers</a
-                    >
-                  </li>
-                  <li>
-                    <a href="manuscriptsubmission.html" class="dropdown-item"
-                      >Manusript Submission</a
-                    >
-                  </li>
-                  <li>
-                    <a href="registrationdetails.html" class="dropdown-item"
-                      >Registration Details</a
-                    >
-                  </li>
-                  <li>
-                    <a href="awards.html" class="dropdown-item">Awards</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a href="organizingcommittee.html" class="nav-link mx-0.8"
-                  >Organizing Committee</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="keynotespeakers.html" class="nav-link mx-0.8"
-                  >Keynote Speakers</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="technicalprogramcommittee.html" class="nav-link mx-0.8"
-                  >Technical Program Committee</a
-                >
-              </li>
-
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-2 dropdown-toggle align-items-center"
-                  role="button"
-                  id="shop"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >More</a
-                >
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="shop"
-                >
-                  <li>
-                    <a href="sponsorship.html" class="dropdown-item"
-                      >Technical/Financial Sponsorship</a
-                    >
-                  </li>
-                  <li>
-                    <a href="venue.html" class="dropdown-item"
-                      >Conference Venue</a
-                    >
-                  </li>
-                  <li>
-                    <a href="confprogram.html" class="dropdown-item"
-                      >Conference Program</a
-                    >
-                  </li>
-                  <li>
-                    <a href="contact.html" class="dropdown-item">Contact Us</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <div class="d-none d-lg-flex align-items-center ms-5">
-              <ul class="d-flex justify-content-end list-unstyled m-0"></ul>
-            </div>
-          </div>
-        </div>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <nav class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4">
+    <div class="container-fluid">
+      <div class="main-logo">
+        <a href="index.html">
+          <img style="height: 80px" src="images/logo.gif" alt="logo" class="img-fluid">
+        </a>
       </div>
-      <div class="container-fluid d-lg-none">
-        <div class="d-flex align-items-end mt-3"></div>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto my-8 p-5">
-        <!-- Section 1 (Image on the right) -->
-        <section class="flex flex-col lg:flex-row mb-8 items-center gap-8">
-          <div class="flex-1 max-w-xs">
-            <img src="images/item1.jpg" alt="NIT Jamshedpur Campus" class="w-full rounded-lg shadow-md" />
-          </div>
-          <div class="flex-1 p-5">
-            <h2 class="text-2xl text-blue-600 mb-3">About NIT Jamshedpur</h2>
-            <p class="text-gray-600 text-lg">
-              Established in 1960, NIT Jamshedpur is one of the premier institutions of India. It has been recognized for its excellence in teaching, research, and fostering innovation. The lush green campus is a hub for academic growth and technological advancement.
-            </p>
-          </div>
-        </section>
-      
-        <!-- Section 2 (Image on the left) -->
-        <section class="flex flex-col lg:flex-row-reverse mb-8 items-center gap-8">
-          <div class="flex-1 max-w-xs">
-            <img src="images/item2.jpg" alt="ICEEPT Conference" class="w-full rounded-lg shadow-md" />
-          </div>
-          <div class="flex-1 p-5">
-            <h2 class="text-2xl text-blue-600 mb-3">About ICEEPT</h2>
-            <p class="text-gray-600 text-lg">
-              ICEEPT is a renowned international conference that bridges academia and industry. Hosted by NIT Jamshedpur, it attracts professionals and researchers to share ideas on electrical, electronics, and computer science advancements.
-            </p>
-          </div>
-        </section>
-      
-        <!-- Section 3 (Image on the right) -->
-        <section class="flex flex-col lg:flex-row mb-8 items-center gap-8">
-          <div class="flex-1 max-w-xs">
-            <img src="images/item3.jpg" alt="Mission" class="w-full rounded-lg shadow-md" />
-          </div>
-          <div class="flex-1 p-5">
-            <h2 class="text-2xl text-blue-600 mb-3">Our Mission</h2>
-            <p class="text-gray-600 text-lg">
-              We aim to foster global collaborations and technological advancements while solving real-world challenges. ICEEPT serves as a beacon for knowledge exchange and innovation in diverse technical domains.
-            </p>
-          </div>
-        </section>
-      
-        <!-- Section 4 (Image on the left) -->
-        <section class="flex flex-col lg:flex-row-reverse mb-8 items-center gap-8">
-          <div class="flex-1 max-w-xs">
-            <img src="images/item4.jpg" alt="Vision" class="w-full rounded-lg shadow-md" />
-          </div>
-          <div class="flex-1 p-5">
-            <h2 class="text-2xl text-blue-600 mb-3">Our Vision</h2>
-            <p class="text-gray-600 text-lg">
-              To establish ICEEPT as a global platform for accelerating advancements in power technologies, fostering interdisciplinary knowledge, and driving solutions for sustainable development.
-            </p>
-          </div>
-        </section>
-      </main>
-      
-      
-      
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container padding-medium">
-        <div class="row">
-          <div class="col-md-4 my-3">
-            <h5 class="text-uppercase fw-bold mb-4">Contact us</h5>
-            <p>
-              <iconify-icon
-                class="social-icon text-primary fs-5 me-2"
-                icon="mdi:location"
-                style="vertical-align: text-bottom"
-              ></iconify-icon>
-              <span class="fw-bold">Address: </span> 30 E Lake St, Chicago, USA
-            </p>
-            <p>
-              <iconify-icon
-                class="social-icon text-primary fs-5 me-2"
-                icon="solar:phone-bold"
-                style="vertical-align: text-bottom"
-              ></iconify-icon>
-              <span class="fw-bold">Phone: </span> (510) 710-3464
-            </p>
-            <p>
-              <iconify-icon
-                class="social-icon text-primary fs-5 me-2"
-                icon="ic:baseline-email"
-                style="vertical-align: text-bottom"
-              ></iconify-icon>
-              <span class="fw-bold">Email: </span>
-              info@eprec.com
-            </p>
-          </div>
-          <div class="col-md-2 my-3">
-            <div class="footer-menu">
-              <h5 class="text-uppercase fw-bold mb-4">Links</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item mb-2">
-                  <a href="index.html" class="footer-link">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body justify-content-end">
+          <ul class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Information of Authors</a>
+              <ul class="dropdown-menu" aria-labelledby="pages">
+                <li>
+                  <a href="crucialdates.html" class="dropdown-item">Crucial Dates</a>
                 </li>
-                <li class="menu-item mb-2">
-                  <a href="about.html" class="footer-link">About us</a>
+                <li>
+                  <a href="callforpapers.html" class="dropdown-item">Call for Papers</a>
                 </li>
-                <li class="menu-item mb-2">
-                  <a href="contact.html" class="footer-link">Contact</a>
+                <li>
+                  <a href="manuscriptsubmission.html" class="dropdown-item">Manusript Submission</a>
+                </li>
+                <li>
+                  <a href="registrationdetails.html" class="dropdown-item">Registration Details</a>
+                </li>
+                <li>
+                  <a href="awards.html" class="dropdown-item">Awards</a>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="col-md-2 my-3">
-            <div class="footer-menu">
-              <h5 class="text-uppercase fw-bold mb-4">support</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item mb-2">
-                  <a href="faq.html" class="footer-link">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a href="organizingcommittee.html" class="nav-link mx-0.8">Organizing Committee</a>
+            </li>
+            <li class="nav-item">
+              <a href="keynotespeakers.html" class="nav-link mx-0.8">Keynote Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a href="technicalprogramcommittee.html" class="nav-link mx-0.8">Technical Program Committee</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="shop" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="shop">
+                <li>
+                  <a href="sponsorship.html" class="dropdown-item">Technical/Financial Sponsorship</a>
                 </li>
-                <li class="menu-item mb-2">
-                  <a href="support.html" class="footer-link">Support</a>
+                <li>
+                  <a href="venue.html" class="dropdown-item">Conference Venue</a>
+                </li>
+                <li>
+                  <a href="confprogram.html" class="dropdown-item">Conference Program</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="dropdown-item">Contact Us</a>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="col-md-3 my-3">
-            <div class="footer-menu">
-              <h5 class="text-uppercase fw-bold mb-4">Follow us</h5>
-              <div class="social-links mt-4">
-                <ul class="d-flex list-unstyled gap-3">
-                  <li class="social">
-                    <a href="#">
-                      <iconify-icon
-                        class="social-icon fs-4 me-2"
-                        icon="ri:facebook-fill"
-                      ></iconify-icon>
-                    </a>
-                  </li>
-                  <li class="social">
-                    <a href="#">
-                      <iconify-icon
-                        class="social-icon fs-4 me-2"
-                        icon="ri:twitter-fill"
-                      ></iconify-icon>
-                    </a>
-                  </li>
-                  <li class="social">
-                    <a href="#">
-                      <iconify-icon
-                        class="social-icon fs-4 me-2"
-                        icon="ri:pinterest-fill"
-                      ></iconify-icon>
-                    </a>
-                  </li>
-                  <li class="social">
-                    <a href="#">
-                      <iconify-icon
-                        class="social-icon fs-4 me-2"
-                        icon="ri:instagram-fill"
-                      ></iconify-icon>
-                    </a>
-                  </li>
-                  <li class="social">
-                    <a href="#">
-                      <iconify-icon
-                        class="social-icon fs-4 me-2"
-                        icon="ri:youtube-fill"
-                      ></iconify-icon>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div id="footer-bottom">
-      <hr class="m-0 text-black-50" />
-      <div class="container py-3">
-        <div class="row mt-3">
-          <div class="col-md-6 copyright">
-            <p>© 2024 EPREC. All rights reserved.</p>
+            </li>
+          </ul>
+          <div class="d-none d-lg-flex align-items-center ms-5">
+            <ul class="d-flex justify-content-end list-unstyled m-0"></ul>
           </div>
         </div>
       </div>
     </div>
+    <div class="container-fluid d-lg-none">
+      <div class="d-flex align-items-end mt-3"></div>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto my-8 p-5">
+    <!-- Section 1 (Image on the right) -->
+    <section class="flex flex-col lg:flex-row mb-8 items-center gap-8">
+      <div class="flex-1 max-w-xs"></div>
+      <div class="flex-1 p-5">
+        <h2 class="text-2xl text-blue-600 mb-3">About NIT Jamshedpur</h2>
+        <p class="text-gray-600 text-lg"> National Institute of Technology Jamshedpur,earlier known as Regional Institute of Technology was established on 15th August 1960 as a joint venture of Government of India and the Government of Bihar in the chain of REC's (Regional Engineering College) in India with the aim to generate technical graduates of highest standards who could provide technological leadership to the region. It was among the first eight Regional Engineering Colleges (RECs) established as part of the Second Five-Year Plan (1956 - 1961). This was the only REC in the country which was named as RIT (Regional Institute of Technology). Therefore RIT Jamshedpur was actually the REC of undivided Bihar &amp; Jharkhand. The foundation stone of RIT (REC) Jamshedpur was laid by Dr. Srikrishna Sinha, the then chief minister of Bihar , with the aim of nurturing talent and setting high standards of education and excellence. On 27th December 2002, in the line of all other RECs of India, RIT Jamshedpur (may be read as REC Jamshedpur too) was converted to National Institute of Technology Jamshedpur with the status of a Deemed University as per the decision of Govt. of India. The Institute is fully funded and governed by the Ministry of Education (MoE), Government of India since 1st April, 2003. On 15 August 2007, NIT Jamshedpur was given the status of the Institute of National Importance through an Act of the Parliament known as the NIT Act. The Institute has 11 departments including engineering, science and humanities. The Institute, with 200 faculty, 4000 students, 150 administrative and supporting staff, is a self-contained campus. It is located on the outskirts of Jamshedpur on 341.3 acres of sprawling, rolling hilly, wooded land. It combines natural beauty of countryside with urban glamour of an industrial area. The flowing river and picturesque backdrop of low hills on one side and large tracks of forest on the other make the campus an ideal place for higher learning and research. It has been growing from strength to strength ever since it was established in 1960. Situated in the heart of the rich mineral and industrial belt of Jharkhand State, the campus encompasses the Main building, the Library, the Computer Center, 13 hostels (7 Boys hostels, 6 Girls hostels), 2 hostels Under-Construction, staff quarters, Guest House, a Students Gymkhana, a Post-office , a branch of State Bank of India, two ATMs, central store and a dispensary. The hostels and departments are connected with high speed wireless LAN. The institute maintains courts for basketball, volleyball, badminton and tennis. Apart from this, it also has cricket, hockey and football grounds. The institute is poised for bright and promising future. The courses have been completely restructured and prepared as per the needs of society and industries. There is refreshing development on every front. The institute has achieved impressive placement for its students, with top industrial houses and software companies recruiting the students in large numbers. </p>
+      </div>
+    </section>
+    <!-- Section 2 (Image on the left) -->
+    <section class="flex flex-col lg:flex-row-reverse mb-8 items-center gap-8">
+      <div class="flex-1 max-w-xs">
+        <img src="images/item2.jpg" alt="ICEEPT Conference" class="w-full rounded-lg shadow-md">
+      </div>
+      <div class="flex-1 p-5">
+        <h2 class="text-2xl text-blue-600 mb-3">About ICEEPT</h2>
+        <p class="text-gray-600 text-lg"> ICEEPT is a renowned international conference that bridges academia and industry. Hosted by NIT Jamshedpur, it attracts professionals and researchers to share ideas on electrical, electronics, and computer science advancements. </p>
+      </div>
+    </section>
+    <!-- Section 3 (Image on the right) -->
+    <section class="flex flex-col lg:flex-row mb-8 items-center gap-8">
+      <div class="flex-1 max-w-xs">
+        <img src="images/item3.jpg" alt="Mission" class="w-full rounded-lg shadow-md">
+      </div>
+      <div class="flex-1 p-5">
+        <h2 class="text-2xl text-blue-600 mb-3">Our Mission</h2>
+        <p class="text-gray-600 text-lg"> We aim to foster global collaborations and technological advancements while solving real-world challenges. ICEEPT serves as a beacon for knowledge exchange and innovation in diverse technical domains. </p>
+      </div>
+    </section>
+    <!-- Section 4 (Image on the left) -->
+    <section class="flex flex-col lg:flex-row-reverse mb-8 items-center gap-8">
+      <div class="flex-1 max-w-xs">
+        <img src="images/item4.jpg" alt="Vision" class="w-full rounded-lg shadow-md">
+      </div>
+      <div class="flex-1 p-5">
+        <h2 class="text-2xl text-blue-600 mb-3">Our Vision</h2>
+        <p class="text-gray-600 text-lg"> To establish ICEEPT as a global platform for accelerating advancements in power technologies, fostering interdisciplinary knowledge, and driving solutions for sustainable development. </p>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container padding-medium">
+      <div class="row">
+        <div class="col-md-4 my-3">
+          <h5 class="text-uppercase fw-bold mb-4">Contact us</h5>
+          <p>
+            <iconify-icon class="social-icon text-primary fs-5 me-2" icon="mdi:location" style="vertical-align: text-bottom"></iconify-icon>
+            <span class="fw-bold">Address: NIT Jamshedpur, Jhakrkhand, India</span>
+          </p>
+          <p>
+            <iconify-icon class="social-icon text-primary fs-5 me-2" icon="solar:phone-bold" style="vertical-align: text-bottom"></iconify-icon>
+            <span class="fw-bold">Phone: </span> (510) 710-3464
+          </p>
+          <p>
+            <iconify-icon class="social-icon text-primary fs-5 me-2" icon="ic:baseline-email" style="vertical-align: text-bottom"></iconify-icon>
+            <span class="fw-bold">Email:&nbsp;ice2cpt@gmail.com</span>
+          </p>
+        </div>
+        <div class="col-md-2 my-3">
+          <div class="footer-menu">
+            <h5 class="text-uppercase fw-bold mb-4">Links</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item mb-2">
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li class="menu-item mb-2">
+                <a href="about.html" class="footer-link">About us</a>
+              </li>
+              <li class="menu-item mb-2">
+                <a href="contact.html" class="footer-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 my-3">
+          <div class="footer-menu">
+            <h5 class="text-uppercase fw-bold mb-4">support</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item mb-2">
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
+              <li class="menu-item mb-2">
+                <a href="support.html" class="footer-link">Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="footer-menu">
+            <h5 class="text-uppercase fw-bold mb-4">Follow us</h5>
+            <div class="social-links mt-4">
+              <ul class="d-flex list-unstyled gap-3">
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon fs-4 me-2" icon="ri:facebook-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon fs-4 me-2" icon="ri:twitter-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon fs-4 me-2" icon="ri:pinterest-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon fs-4 me-2" icon="ri:instagram-fill"></iconify-icon>
+                  </a>
+                </li>
+                <li class="social">
+                  <a href="#">
+                    <iconify-icon class="social-icon fs-4 me-2" icon="ri:youtube-fill"></iconify-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="footer-bottom">
+    <hr class="m-0 text-black-50">
+    <div class="container py-3">
+      <div class="row mt-3">
+        <div class="col-md-6 copyright">
+          <p>© 2024 EPREC. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" style=""></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
 
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  </body>
 </html>
