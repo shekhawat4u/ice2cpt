@@ -1,6 +1,94 @@
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
+.transparent-box {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 650px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box-logo {
+  width: 200px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+.box-title {
+  font-size: 2 rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.box-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.box-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 4px black, 0px 0px 4px black; /* Box shadow */
+  padding: 20px; /* Padding inside the box */
+}
+
+.countdown-heading {
+  font-size: 1.8rem; /* Adjust font size for the heading */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.countdown-timer {
+  font-size: 1.5rem; /* Adjust font size for the countdown timer */
+  font-weight: bold;
+  color: darkblue;
+  margin-top: 10px;
+}
+
+#paper-submission {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px black, 0px 0px 4px black;
+}
+
+#paper-submission h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#paper-submission p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#paper-submission .btn {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
 :root {
   /* widths for rows and containers
      */
@@ -265,9 +353,9 @@ a {
 }
 
 
-/*----------------------------------------------*/
+/----------------------------------------------/
 /* 6. SITE STRUCTURE */
-/*----------------------------------------------*/
+/----------------------------------------------/
 /* 6.1 Header
 --------------------------------------------------------------*/
 /* Preloader */
@@ -411,7 +499,7 @@ a {
 
 
 
-/*----- Services Section Style -------------------------*/
+/----- Services Section Style -------------------------/
 .services-element {
   cursor: pointer;
   background: var(--light-grey-color);
@@ -424,7 +512,7 @@ a {
 
 
 
-/*----- topselling Section Style -------------------------*/
+/----- topselling Section Style -------------------------/
 button.filter-button {
   font-size: 1rem;
   font-weight: 600;
@@ -805,7 +893,7 @@ span.price-tick {
 /* - course detail Page style
 --------------------------------------------------------------*/
 
-/*---- video section style start ----*/
+/---- video section style start ----/
 /* color box style */
 div#cboxOverlay {
   opacity: 0.8 !important;
@@ -868,7 +956,7 @@ a.course:hover {
 }
 
 
-/*---- video section style start ----*/
+/---- video section style start ----/
 
 /* color box style */
 div#cboxOverlay {
@@ -950,4 +1038,3 @@ iconify-icon.video-icon:hover {
   color: #0056b3;
   transform: rotate(90deg); /* Rotate the button */
 }
-
