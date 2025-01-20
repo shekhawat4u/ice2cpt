@@ -110,16 +110,22 @@
 
   <nav class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4 mx-auto">
 
-    <div class="w-100 bg-light py-2 border-bottom">
+    <div class="w-100 py-2 border-bottom" style="background-color: #efefef9b; border-radius: 40px;" >
       <div class="container d-flex justify-content-between align-items-center">
-        <a href="faq.html" class="text-dark text-decoration-none">1</a>
-        <a href="support.html" class="text-dark text-decoration-none">2</a>
-        <a href="contact.html" class="text-dark text-decoration-none">3</a>
-        <a href="index.html">
-          <img style="height: 25px;" src="images/IEEE_kol_logo.png" alt="logo" class="mb-1 mx-auto img-fluid" width="40" height="25">
+        <a target="_blank" href="https://nitjsr.ac.in/">
+          <img style="height: 55px;" src="images/NITJSRlOGO.png" alt="logo" class="mb-1 mx-auto img-fluid" width="60" height="40">
         </a>
-        <a href="index.html">
-          <img style="height: 25px;" src="images/IEEE-Banglore.png" alt="logo" class="mb-1 mx-auto img-fluid" width="80" height="25">
+        <a target="_blank" href="https://ieeenitjsr.netlify.app/">
+          <img style="height: 55px;" src="images/nitiee.png" alt="logo" class="mb-1 mx-auto img-fluid" width="70" height="25">
+        </a>
+        <!-- <a href="index.html">
+          <img style="height: 55px;" src="images/nitj.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
+        </a> -->
+        <a target="_blank" href="index.html">
+          <img style="height: 55px;" src="images/IEEEKSpng.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
+        </a>
+        <a target="_blank" href="https://www.ieee.org/">
+          <img style="height: 55px;" src="images/IEEELOGO.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
         </a>
       </div>
     </div>
@@ -184,7 +190,7 @@
   </nav>
 
 
-  <section id="hero">
+  <!-- <section id="hero">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -215,7 +221,163 @@
         </div>
       </div>
     </div>
+  </section> -->
+  <section id="hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="carousel slide" data-ride="carousel" id="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"> 
+                <img class="d-block img-fluid w-100 my-5 mx-auto border h-75 rounded p-2 py-5" src="images/nitj.jpg">
+              </div>
+              <div class="carousel-item"> 
+                <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-bubble-light.svg">
+                <div class="carousel-caption">
+                  <h5 class="m-0">Carousel</h5>
+                  <p>with controls</p>
+                </div>
+              </div>
+              <div class="carousel-item"> 
+                <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-moon.svg">
+                <div class="carousel-caption">
+                  <h5 class="m-0">Carousel</h5>
+                  <p>with controls</p>
+                </div>
+              </div>
+            </div> 
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"> 
+              <span class="carousel-control-prev-icon"></span> 
+              <span class="sr-only">Previous</span> 
+            </a> 
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next"> 
+              <span class="carousel-control-next-icon"></span> 
+              <span class="sr-only">Next</span> 
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="transparent-box">
+        <img src="images/logo.gif" width="240px" alt="Logo" class="box-logo">
+        <h2 class="box-title">International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend<br>
+          <br>OCTOBER 29 - 31 ,2025</h2>
+      </div>
+    </div>
   </section>
+
+</section>
+<style> @media (min-width: 992px) { /* Applies to large screens (≥992px) */
+    .custom-img {
+      margin-top: 90px;
+      margin-left: 65px;
+    }
+  }
+</style>
+<section id="countdown-paper" class="container-fluid my-5">
+  <div class="row">
+    <!-- Countdown Section (Left) -->
+    <!-- Countdown Section -->
+    <div class="col-md-6">
+      <div id="countdown" class="text-center custom-box">
+        <h2 class="countdown-heading">Countdown of the Conference</h2>
+        <div id="countdown-timer" class="countdown-timer">
+          
+          <!-- Countdown will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper Submission Section (Right) -->
+    <div class="col-md-6">
+      <div id="paper-submission" class="text-center p-4" style="background-color: rgba   1Z(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0px 0px 4px black, 0px 0px 4px black;">
+        <h2 class="mb-4">Paper Submission</h2>
+        <p class="mb-4">Submit your research papers for the conference.</p>
+        <button class="btn btn-primary">Submit Paper</button>
+      </div>
+    </div>
+  </div>
+</section>
+<style> #countdown {
+    padding: 20px;
+  }
+
+  .countdown-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+  }
+
+  .countdown-timer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Styling for each time unit */
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 90px;
+    background: #f9f9f9;
+  }
+
+  .countdown-unit span {
+    font-size: 1.4rem;
+    color: #555;
+  }
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .countdown-heading {
+      font-size: 1.6rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.5rem;
+    }
+
+    .countdown-unit {
+      min-width: 80px;
+      padding: 6px;
+    }
+
+    .countdown-unit span {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .countdown-heading {
+      font-size: 1.4rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.2rem;
+      gap: 5px;
+    }
+
+    .countdown-unit {
+      min-width: 70px;
+      padding: 4px;
+    }
+
+    .countdown-unit span {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+
   <style> @media (min-width: 992px) { /* Applies to large screens (≥992px) */
       .custom-img {
         margin-top: 90px;
@@ -224,9 +386,9 @@
     }
   </style>
   <section id="countdown" class="text-center my-5">
-    <h2 class="countdown-heading">Countdown of the Conference</h2>
-    <div id="countdown-timer" class="countdown-timer">The date has passed!</div>
-    <div id="countdown-timer" class="countdown-timer" style="	box-shadow: 0px 0px 4px  black, 0px 0px 4px  black;">The date has passed!</div>
+    <!-- <h2 class="countdown-heading">Countdown of the Conference</h2> -->
+    <!-- <div id="countdown-timer" class="countdown-timer">The date has passed!</div> -->
+    <!-- <div id="countdown-timer" class="countdown-timer" style="	box-shadow: 0px 0px 4px  black, 0px 0px 4px  black;">The date has passed!</div> -->
   </section>
   <style> #countdown {
       padding: 20px;
@@ -307,146 +469,15 @@
   </style>
   <section id="service" class="padding-medium">
     <div class="container">
-      <div class="text-center">
-        <h2 class="display-5 fw-semibold">Why to <span style="color: blue;"> choose us</span></h2>
-        <p class="secondary-font">Get many features from us exactly what you are looking for.</p>
-      </div>
-      <div class="row g-md-4 mt-2">
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="fluent:notepad-person-24-regular"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">Keynote Speakers</h4>
-              <p>Listen to renowned experts sharing insights on advancing power technologies and innovations in electrical engineering.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="la:certificate"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">Certified Workshops</h4>
-              <p>Participate in hands-on workshops and gain certifications in emerging fields like AI and renewable energy.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="mdi:virtual-meeting"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">Hybrid Sessions</h4>
-              <p>Join the conference online or in-person, ensuring accessibility for participants worldwide.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="mdi:school-online"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">200+ Research Papers</h4>
-              <p>Explore groundbreaking research papers presented by scholars from prestigious institutions globally.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="uil:notebooks"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">Exclusive Publications</h4>
-              <p>Get access to conference proceedings and exclusive publications in leading journals.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div class="services-element p-4 rounded-3 d-flex">
-            <div>
-              <iconify-icon class="service-icon fs-1" icon="uiw:global"></iconify-icon>
-            </div>
-            <div class="ps-3">
-              <h4 class="py-2 m-0">Global Networking</h4>
-              <p>Connect with industry leaders, researchers, and professionals to collaborate on future projects.</p>
-            </div>
-          </div>
+      <div class="text-justify">
+        <h2 class="display-5 fw-semibold">About the <span style="color: blue;"> Conference</span></h2>
+        <p class="secondary-font">ICE2CPT aims to provide a comprehensive platform for professionals, researchers, and industry experts to exchange knowledge and insights on emerging trends and innovations in electrical, electronics, and computer science domains. With a focus on advanced power technologies, the conference seeks to address critical challenges and opportunities in power systems, renewable energy integration, intelligent control systems, and energy-efficient solutions. Additionally, ICE2CPT emphasizes advancements in transmitter design, signal processing, signal transmission in channels, antenna design, and the design of overall control systems. The conference encourages interdisciplinary collaboration to explore the transformative potential of cutting-edge technologies, including artificial intelligence, IoT, and smart grids, in shaping the future of energy and communication systems. By fostering discussions on sustainable and innovative approaches, ICE2CPT aims to create a conducive environment for knowledge sharing and the development of next-generation solutions for a sustainable and interconnected future.</p>
         </div>
       </div>
     </div>
   </section>
-  <section id="register">
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-md-6 ">
-          <img src="images/register-img.png" alt="img" class="img-fluid">
-        </div>
-        <div class="col-md-4 ">
-          <div class="mb-5 mt-5 mt-lg-0">
-            <h2 class="display-5 fw-semibold"> Get Your <span style="color: blue;">Skills Certificate</span></h2>
-            <p class="secondary-font">Simple steps to get your quality skills certificate through ICE2CPT.</p>
-          </div>
-          <form id="form">
-            <input type="text" name="email" placeholder="Write Your Name*" class="form-control w-100 mb-4">
-            <input type="email" name="email" placeholder="Write Your Email Address*" class="form-control w-100 mb-4">
-            <button class="btn btn-getstarted px-5 py-3 mt-2 mb-4"> Get Started now</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="achievement" style="background-color: #f5f5f5;"></section>
-  <section id="testimonial" style="background-image: url(images/background-img.jpg); background-repeat: no-repeat; background-size: cover;">
-    <div class="container padding-medium">
-      <div class="text-center">
-        <h2 class="display-5 fw-semibold">See What Our <span style="color: #007bff;">Learners Say</span></h2>
-        <p class="secondary-font text-muted">Hear directly from our learners about their experiences and achievements with us.</p>
-      </div>
-      <div class="row">
-        <div class="offset-md-1 col-md-10">
-          <div class="swiper testimonial-swiper">
-            <div class="swiper-wrapper">
-              <!-- Testimonial 1 -->
-              <div class="swiper-slide">
-                <div class="text-center my-4">
-                  <img src="images/logo2.jpg" alt="Recco Gracia" class="img-fluid rounded-circle" style="width: 120px; height: 120px;">
-                  <h5 class="m-0 mt-2">Recco Gracia</h5>
-                  <p class="text-muted">Web Developer</p>
-                  <p class="lh-lg text-black-50">“The courses here are outstanding! I gained practical skills that directly improved my work as a Web Developer. Highly recommended!”</p>
-                </div>
-              </div>
-              <!-- Testimonial 2 -->
-              <div class="swiper-slide">
-                <div class="text-center my-4">
-                  <img src="images/logo2.jpg" alt="Georgie Maggie" class="img-fluid rounded-circle" style="width: 120px; height: 120px;">
-                  <h5 class="m-0 mt-2">Georgie Maggie</h5>
-                  <p class="text-muted">Digital Marketer</p>
-                  <p class="lh-lg text-black-50">“An amazing platform for learning! The modules were in-depth and the community support made it an even better experience.”</p>
-                </div>
-              </div>
-              <!-- Testimonial 3 -->
-              <div class="swiper-slide">
-                <div class="text-center my-4">
-                  <img src="images/logo2.jpg" alt="Emmy Watson" class="img-fluid rounded-circle" style="width: 120px; height: 120px;">
-                  <h5 class="m-0 mt-2">Emmy Watson</h5>
-                  <p class="text-muted">Photographer</p>
-                  <p class="lh-lg text-black-50">“The skills I learned here have completely transformed my career. I can now confidently approach projects and deliver quality work.”</p>
-                </div>
-              </div>
-            </div>
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  
   <footer id="footer">
     <div class="container padding-medium ">
       <div class="row">
@@ -557,7 +588,7 @@
       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-      document.getElementById("countdown-timer").innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+      document.getElementById("countdown-timer").innerHTML = ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds;
     }
     setInterval(updateCountdown, 1000);
   </script>
