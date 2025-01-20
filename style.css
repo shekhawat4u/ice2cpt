@@ -345,6 +345,18 @@ a {
   color: var(--accent-color);
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  flex-direction: column;
+  left: 0;
+  width: 100%; /* Make sure it spans the full width */
+  background-color: #ffffff; /* White background */
+  z-index: 1050; /* Keep it above all other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  border-bottom: 1px solid #eaeaea; /* Optional: Add a subtle border */
+}
+
 .nav-link {
   color: #000;
   font-size: 1rem;

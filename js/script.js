@@ -16,12 +16,6 @@
   // background color when scroll 
   var initScrollNav = function () {
     var scroll = $(window).scrollTop();
-
-    if (scroll >= 200) {
-      $('.navbar.fixed-top').addClass("bg-white");
-    } else {
-      $('.navbar.fixed-top').removeClass("bg-white");
-    }
   }
 
   $(window).scroll(function () {
