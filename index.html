@@ -165,8 +165,7 @@
                 <li><a href="callforpapers.html" class="dropdown-item">Call for Papers</a></li>
                 <li><a href="SS.html" class="dropdown-item">Call for Special Session</a></li>
                 <li><a href="crucialdates.html" class="dropdown-item">Important Dates</a></li>
-                <li><a href="callforpapers.html" class="dropdown-item">Approved Speacial Session</a></li>
-                <li><a href="manuscriptsubmission.html" class="dropdown-item">Paper Submission Gauidlines</a></li>
+                <li><a href="manuscriptsubmission.html" class="dropdown-item">Paper Submission Guidelines</a></li>
                 <li><a href="confprogram.html" class="dropdown-item">Conference Program</a></li>
                 </ul>
             </li>
@@ -262,7 +261,7 @@
   }
 </style>
 
-<section id="service" class="padding- 10px ">
+<section id="service" class="padding- 12px ">
   <div class="container">
     <div class="text-center">
       <h3 class="display-5 fw-semibold"><span style="color: rgb(17, 17, 112);"> Welcome to ICE2CPT-2025</span></h3>
@@ -275,224 +274,235 @@
   <div class="row">
     <!-- Countdown Section (Left) -->
     <!-- Countdown Section -->
-    <div class="col-md-6">
+    <div class="col-md-5">
       <div id="countdown" class="text-center custom-box">
         <h2 class="countdown-heading">Countdown of the Conference</h2>
-        <div id="countdown-timer" class="countdown-timer">
-          
-          <!-- Countdown will be displayed here -->
-        </div>
+        <div id="counter" class="counter"></div>
+        <script>
+          function updateCountdown() {
+              const targetDate = new Date('October 29, 2025 00:00:00').getTime();
+              const now = new Date().getTime();
+              const timeLeft = targetDate - now;
+              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+              document.getElementById('counter').innerText = `${days} days ${hours} hour ${minutes} min ${seconds} sec`;
+          }
+          setInterval(updateCountdown, 1000);
+          updateCountdown();
+      </script>
+      <style>
+        body {
+          font-size: 1.4em;  
+          font-family: sans-serif;
+          font-weight: bold;
+          color: darkblue;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .counter {
+            font-size: 1.4em;
+            margin: 10px;
+        }
+    </style>
       </div>
     </div>
 
+    <!-- Welcome -->
+    <div class="col-md-2">
+      <a target="_blank">
+        <img style="height: 100px;" src="images/wel.png" alt="logo" class="mb-1 mx-auto img-fluid" width="400" height="100">
+      </a>
+    </div>
+
     <!-- Paper Submission Section (Right) -->
-    <div class="col-md-6">
+    <div class="col-md-5">
       <div id="paper-submission" class="text-center p-2" style="background-color: rgba   1Z(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0px 0px 4px black, 0px 0px 4px black;">
         <a target="_blank" href="https://cmt3.research.microsoft.com/ICE2CPT2025"> <h2 class="mb-3">Paper Submission</h2> <button class="btn btn-primary">Submit Paper</button> </a>
       </div>
     </div>
+
+    
+
   </div>
 </section>
-<style> #countdown {
-    padding: 20px;
-  }
-
-  .countdown-heading {
-    font-size: 2rem;
-    font-weight: 600;
-    color: black;
-    margin-bottom: 15px;
-  }
-
-  .countdown-timer {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #007bff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  /* Styling for each time unit */
-  .countdown-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    min-width: 90px;
-    background: #f9f9f9;
-  }
-
-  .countdown-unit span {
-    font-size: 1.4rem;
-    color: #555;
-  }
-
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .countdown-heading {
-      font-size: 1.6rem;
-    }
-
-    .countdown-timer {
-      font-size: 1.5rem;
-    }
-
-    .countdown-unit {
-      min-width: 80px;
-      padding: 6px;
-    }
-
-    .countdown-unit span {
-      font-size: 1.2rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .countdown-heading {
-      font-size: 1.4rem;
-    }
-
-    .countdown-timer {
-      font-size: 1.2rem;
-      gap: 5px;
-    }
-
-    .countdown-unit {
-      min-width: 70px;
-      padding: 4px;
-    }
-
-    .countdown-unit span {
-      font-size: 1rem;
-    }
-  }
-</style>
 
 
-  <style> @media (min-width: 992px) { /* Applies to large screens (≥992px) */
-      .custom-img {
-        margin-top: 90px;
-        margin-left: 65px;
-      }
-    }
-  </style>
-  <section id="countdown" class="text-center my-5">
+
+   <!-- codes for if deadline ends -->
+  <section id="countdown" class="text-center my-9">
     <!-- <h2 class="countdown-heading">Countdown of the Conference</h2> -->
     <!-- <div id="countdown-timer" class="countdown-timer">The date has passed!</div> -->
     <!-- <div id="countdown-timer" class="countdown-timer" style="	box-shadow: 0px 0px 4px  black, 0px 0px 4px  black;">The date has passed!</div> -->
   </section>
-  <style> #countdown {
-      padding: 20px;
-    }
   
-    .countdown-heading {
-      font-size: 2rem;
-      font-weight: 600;
-      color: black;
-      margin-bottom: 10px;
-    }
-  
-    .countdown-timer {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: darkblue;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-  
-    /* Styling for each time unit */
-    .countdown-unit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 8px;
-      min-width: 90px;
-      background: #f9f9f9;
-    }
-  
-    .countdown-unit span {
-      font-size: 1.4rem;
-      color: #555;
-    }
-  
-    /* Responsive Styling */
-    @media (max-width: 768px) {
-      .countdown-heading {
-        font-size: 1.6rem;
-      }
-  
-      .countdown-timer {
-        font-size: 1.5rem;
-      }
-  
-      .countdown-unit {
-        min-width: 80px;
-        padding: 6px;
-      }
-  
-      .countdown-unit span {
-        font-size: 1.2rem;
-      }
-    }
-  
-    @media (max-width: 576px) {
-      .countdown-heading {
-        font-size: 1.4rem;
-      }
-  
-      .countdown-timer {
-        font-size: 1.2rem;
-        gap: 5px;
-      }
-  
-      .countdown-unit {
-        min-width: 70px;
-        padding: 4px;
-      }
-  
-      .countdown-unit span {
-        font-size: 1rem;
-      }
-    }
-  </style>
+ <!-- about section -->
 
-  <section id="service" class="padding-small">
-    <div class="container">
-      <div class="text-justify">
-        <h2 class="display-7 fw-semibold">About the <span style="color: blue;"> Conference</span></h2>
-        <p class="text-gray-550 max-w-6xl text-justify mx-auto">International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend (ICE2CPT) aims to provide a comprehensive platform for professionals, researchers, and industry experts to exchange knowledge and insights on emerging trends and innovations in electrical, electronics, and computer science domains. With a focus on advanced power technologies, the conference seeks to address critical challenges and opportunities in power systems, renewable energy integration, intelligent control systems, and energy-efficient solutions. Additionally, ICE2CPT emphasizes advancements in transmitter design, signal processing, signal transmission in channels, antenna design, and the design of overall control systems. The conference encourages interdisciplinary collaboration to explore the transformative potential of cutting-edge technologies, including artificial intelligence, IoT, and smart grids, in shaping the future of energy and communication systems. By fostering discussions on sustainable and innovative approaches, ICE2CPT aims to create a conducive environment for knowledge sharing and the development of next-generation solutions for a sustainable and interconnected future.</p>
+ <section class="about_section layout_padding mt-5">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+           
+            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> ICE2CPT 2025 </span></h2>
+            
+          </div>
+          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
+            International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend (ICE2CPT) aims to provide a comprehensive platform for professionals, researchers, and industry experts to exchange knowledge and insights on emerging trends and innovations in electrical, electronics, and computer science domains. With a focus on advanced power technologies, the conference seeks to address critical challenges and opportunities in power systems, renewable energy integration, intelligent control systems, and energy-efficient solutions. Additionally, ICE2CPT emphasizes advancements in transmitter design, signal processing, signal transmission in channels, antenna design, and the design of overall control systems. The conference encourages interdisciplinary collaboration to explore the transformative potential of cutting-edge technologies, including artificial intelligence, IoT, and smart grids, in shaping the future of energy and communication systems. By fostering discussions on sustainable and innovative approaches, ICE2CPT aims to create a conducive environment for knowledge sharing and the development of next-generation solutions for a sustainable and interconnected future.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- <div class="detail-box"> -->
+        <div class="heading_container" id="venue">
+          
+            <a target="_blank" href="https://nitjsr.ac.in/">
+              <img style="height: 400px;" src="images/abtimg.png" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="400">
+            </a>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="about_section layout_padding mt-5">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <div class="detail-box"> -->
+        <div class="heading_container" id="venue">
+          <a target="_blank" href="https://nitjsr.ac.in/departments/eee#:~:text=The%20Department%20of%20Electrical%20Engineering%20was%20started%20in,well%20placed%20in%20both%20public%20and%20private%20sectors.">
+            <img style="height: 300px;" src="images/EEN.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="300">
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            
+            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> Electrical Department </span></h2>
+            
+          </div>
+          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
+            
+            The Department of Electrical Engineering was started in 1960. The Department has been consistently producing quality Engineers since its inception and is also involved in research and development activities. The alumni of the department are well placed in both public and private sectors. In addition to the UG programme the department runs PG programme in Power Systems and Power Electronics and Drives and Ph.D. program in different areas of specialization. To emerge as a front-runner for catering latest needs of Power Sector, Electrical Industries, Public Service and to improve the quality of life with high human values. Imparting quality education and skills by establishing the state-of-the-art research facilities to students that further contributes to the socio–economic growth and eventually contributing to sustainable development of the society.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="service" class="padding-small">
-    <div class="container">
-      <div class="text-justify">
-        <h3 class="display-7 fw-semibold">About <span style="color: blue;"> NIT Jamshedpur</span></h3>
-        <p class="text-gray-550 max-w-6xl text-justify mx-auto"> The National Institute of Technology Jamshedpur (NIT Jamshedpur), is an Institute of National Importance located at Jamshedpur, Jharkhand, India. Established as a Regional Institute of Technology in 1960, it was upgraded to NIT on 27 December 2002 with the status of Deemed University. It is one of the 31 NITs in India, and as such is directly under the control of the Ministry of Human Resource Development (MHRD). It is the third in the chain of eight NITs established as a part of the Second Five Year Plan (1956–61) by the Government of India. The Institute has twelve departments including engineering, science and humanities. The institute offers a 4-year Bachelor of Technology degree in the various streams. The institute also offers Master and Ph.D degrees in various streams. The institute is bound to the quest for academic excellence and good governance, growth of institute, admired and respected institute for students, employees and industry, innovative leader.</p>
+
+
+
+
+<section class="about_section layout_padding mt-5">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+           
+            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> NIT Jamshedpur </span></h2>
+            
+          </div>
+          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
+            The National Institute of Technology Jamshedpur (NIT Jamshedpur), is an Institute of National Importance located at Jamshedpur, Jharkhand, India. Established as a Regional Institute of Technology in 1960, it was upgraded to NIT on 27 December 2002 with the status of Deemed University. It is one of the 31 NITs in India, and as such is directly under the control of the Ministry of Human Resource Development (MHRD). It is the third in the chain of eight NITs established as a part of the Second Five Year Plan (1956–61) by the Government of India. The Institute has twelve departments including engineering, science and humanities. The institute offers a 4-year Bachelor of Technology degree in the various streams. The institute also offers Master and Ph.D degrees in various streams. The institute is bound to the quest for academic excellence and good governance, growth of institute, admired and respected institute for students, employees and industry, innovative leader.
+          
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- <div class="detail-box"> -->
+        <div class="heading_container" id="venue">
+          <a target="_blank" href="https://nitjsr.ac.in/">
+            <img style="height: 300px;" src="images/nitj.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="300">
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="about_section layout_padding mt-5">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <div class="detail-box"> -->
+        <div class="heading_container" id="venue">
+          <a target="_blank" href="https://www.tripadvisor.in/Attractions-g662321-Activities-Jamshedpur_East_Singhbhum_District_Jharkhand.html">
+            <img style="height: 350px;" src="images/jam.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="350">
+          </a>
+          
+        </div>
+       
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            
+            <h2 class="display-7 fw-semibold">Places to visit in <span style="color: blue;">Jamshedpur </span></h2>
+            
+          </div>
+          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
+            Jamshedpur, also known as Tatanagar, is a major industrial city in eastern India. It is the largest city in the state of Jharkhand. In terms of economy Jamshedpur has second largest economy in Jharkhand after Dhanbad. Jamshedpur stands as the third largest metropolitan area in the region. The modern city of Jamshedpur was established in 1912. It was named after industrialist Jamshedji Tata, who laid foundation of Asia's first steel plant in the city and established Tata Group. The city played active role in the World War I. It was a high value target during the Second World War. Following the independence of India, the city became part of Bihar. Jamshedpur was impacted severely by the communal riots in 1964 and 1979. It was also a centre of the statehood movement. In 2000, the city became part of newly-formed Jharkhand state. Jamshedpur has many industries, greenery, and with a very beautiful climate. Dalma hills, Dimna lake, Hudco lake, Tata steel, Zoological park, Bhuvaneshwari temples, Jubilee park, etc, these are the major attractions in Jamshedpur where you can visit. 
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="service" class="padding-small">
-    <div class="container">
-      <div class="text-justify">
-        <h3 class="display-7 fw-semibold">About <span style="color: blue;"> EE Department </span></h3>
-        <p class="text-gray-550 max-w-6xl text-justify mx-auto"> The Department of Electrical Engineering was started in 1960. The Department has been consistently producing quality Engineers since its inception and is also involved in research and development activities. The alumni of the department are well placed in both public and private sectors. In addition to the UG programme the department runs PG programme in Power Systems and Power Electronics and Drives and Ph.D. program in different areas of specialization. To emerge as a front-runner for catering latest needs of Power Sector, Electrical Industries, Public Service and to improve the quality of life with high human values. Imparting quality education and skills by establishing the state-of-the-art research facilities to students that further contributes to the socio–economic growth and eventually contributing to sustainable development of the society.</p>
-        </div>
+
+
+  <!-- Visitor counter-->
+  <div class="heading_container" id="venue">
+  <section class="about_section layout_padding mt-5">
+    <div class="container ">
+      <div class="row">
+
+        <h2>Visitor's Counter</h2>
+    <p>Number of Visits: <span id="visitorCount">0</span></p>
+
+    <script>
+        // Retrieve visitor count from local storage
+        let count = localStorage.getItem("visitorCount");
+
+        if (count === null) {
+            count = 1; // First visit
+        } else {
+            count = parseInt(count) + 1; // Increment count
+        }
+
+        // Store updated count in local storage
+        localStorage.setItem("visitorCount", count);
+
+        // Display the count
+        document.getElementById("visitorCount").innerText = count;
+    </script>  
       </div>
     </div>
   </section>
+</div>
+
+
 
   <!-- Footer-->
   <footer class="bg-black text-center py-5">
