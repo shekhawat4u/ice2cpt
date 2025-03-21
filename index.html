@@ -293,7 +293,7 @@
 .marquee-content {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee-scroll 25s linear infinite;
+    animation: marquee-scroll 20s linear infinite;
 }
 
 @keyframes marquee-scroll {
@@ -305,9 +305,14 @@
     color: white;
     text-decoration: none;
 }
-
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused; /* Stops when hovered */
+}
 .marquee-container a:hover {
     text-decoration: underline;
+}
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused; /* Stops when hovered */
 }
 </style>
 
