@@ -17,171 +17,690 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      section {
+          display: grid;
+          place-items: center;
+      }
+
+      h1 {
+          font-size: 3rem;
+          padding: 20px;
+          margin: 20px 0px;
+      }
+      .spbenefit{
+        width: 70%;
+      }
+      .slider {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 65%;
+          overflow: hidden;
+          background: rgb(255, 255, 255);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(7.4px);
+          -webkit-backdrop-filter: blur(7.4px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .slider-items {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          animation: scrolling 10s linear infinite;
+
+      }
+
+      @keyframes scrolling {
+
+          0% {
+              transform: translateX(80%);
+          }
+
+          100% {
+              transform: translateX(-20%);
+          }
+      }
+
+      .slider-items img {
+          width: 12%;
+          margin: 20px;
+
+      }
+      </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- THIS IS FOR NAVBAR SO PLEASE DON'T DO ANYTHING HERE -->
+<style>
+  body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  @keyframes waveMove {
+    0% {
+      transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
+    }
+
+    25% {
+      transform: translateX(-15px) scaleY(1.03) rotate(180deg) scaleX(-1);
+    }
+
+    50% {
+      transform: translateX(-30px) scaleY(1.01) rotate(180deg) scaleX(-1);
+    }
+
+    75% {
+      transform: translateX(-15px) scaleY(1.04) rotate(180deg) scaleX(-1);
+    }
+
+    100% {
+      transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
+    }
+  }
+
+
+  .navbar-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 17rem;
+    transform: scaleX(-1);
+    transform: rotate(180deg);
+    pointer-events: none;
+    animation: waveMove 4s infinite;
+  }
+
+  /* Stack layers with slight offsets for depth */
+  .wave1 {
+    z-index: 1;
+    opacity: 0.9;
+    animation-delay: 0s;
+  }
+
+  .wave2 {
+    z-index: 2;
+    opacity: 0.7;
+    animation-delay: 1s;
+  }
+
+  .wave3 {
+    z-index: 3;
+    opacity: 0.6;
+    animation-delay: 2s;
+  }
+
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background-color: #dfe5e8;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar.shrink {
+    padding: 10px 5%;
+  }
+
+  .logo {
+    width: 9rem;
+    transition: transform 0.4s ease;
+  }
+
+  .left-logo img {
+    height: auto;
+    width: 10rem;
+  }
+
+  .right-logo img {
+    height: 10rem;
+    width: auto;
+  }
+
+  .navbar.shrink .logo {
+    transform: scale(0.8);
+  }
+
+  /* .logo img {
+      width: 10rem;
+      height: auto;
+    } */
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(100% - 200px);
+    flex: 1;
+    transition: all 0.4s ease;
+  }
+
+  .sponsors {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    margin-bottom: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    animation: fadeSlideIn 1s ease forwards;
+  }
+
+  .sponsors img {
+    height: 3.5rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .sponsors img:hover {
+    transform: scale(1.1);
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .menu a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.5s, transform 0.5s ease;
+    display: inline-block;
+  }
+
+  .menu a:hover {
+    background-color: #002b5c;
+    /* dark blue */
+    color: #fff;
+    /* white text */
+    transform: scale(1.05);
+  }
+
+  /* Dropdown styles */
+  .dropdown-content {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: perspective(600px) rotateX(-10deg) translateY(10px);
+    transition: all 0.5s ease;
+    transform-origin: top;
+    z-index: 10;
+    min-width: 220px;
+    padding: 10px 0;
+  }
+
+  .dropdown-content li {
+    padding: 0;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    color: #333;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
+
+  .menu a:hover {
+    background-color: #002b5c;
+    /* dark blue */
+    color: #fff;
+    /* white text */
+    transform: scale(1.05);
+  }
+
+  /* Show dropdown on hover */
+  .menu li.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: perspective(600px) rotateX(0deg) translateY(0);
+  }
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive styles */
+ .burger{
+  display: none;
+ }
+
+ @media screen and (max-width: 1400px) {
+  .menu{
+    gap: 0px;
+  }
+  .menu a{
+    font-size: 0.9rem;
+  }
+  .sponsors{
+    gap: 2rem;
+  }
+}
+ @media screen and (max-width: 850px) {
+  .burger{
+    top: 3.7rem;
+    right: 1rem;
+     position: relative;
+    display: block;
+ }
+
+ .menu {
+  display: flex; /* default is flex so transition works */
+  flex-direction: column;
+  background: white;
+  color: black;
+  position: absolute;
+  top: 7.5rem;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.menu.menu-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scaleY(1);
+}
+
+.menu li {
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+.menu .dropdown-content {
+position: absolute;
+top: 0;
+left: -220px; /* Adjust as needed */
+background-color: #fff;
+/* padding: 0.5rem 1rem; */
+border-radius: 8px;
+display: none;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+/* min-width: 150px; */
+flex-direction: column;
+}
+
+.menu .dropdown:hover .dropdown-content {
+display: flex;
+}
+
+.menu .dropdown-content li {
+margin: 0.5rem 0;
+}
+
+
+/* .burger {
+  display: block;
+  cursor: pointer;
+  z-index: 1000;
+} */
+
+.center-content {
+  display: flex; /* Keep center-content active */
+}
+
+.sponsors {
+  display: none; /* Hide only unwanted items */
+}
+
+.right-logo {
+  display: none;
+}
+.hero-sec h1{
+ font-size: x-large;
+}
+
+.about-flex-box{
+ flex-direction: column;
+}
+.paragraph{
+   font-size: 1rem;
+ }
+ section h4 {
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 500;
+ }
+}
+</style>
+    </head>
 
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
 
-  <nav class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4 mx-auto">
+  <!-- nav  -->
 
-    <div class="w-100 py-2 border-bottom" style="background-color: #efefef9b; border-radius: 30px;" >
-      <div class="container d-flex justify-content-between align-items-center">
-        <a target="_blank" href="https://nitjsr.ac.in/">
-          <img style="height: 45px;" src="images/NITJSRNEWLOG.png" alt="logo" class="mb-1 mx-auto img-fluid" width="400" height="40">
-        </a>
-        <a target="_blank" href="https://ieeenitjsr.netlify.app/">
-          <img style="height: 45px;" src="images/nitlogosc.png" alt="logo" class="mb-1 mx-auto img-fluid" width="70" height="45">
-        </a>
-        <!-- <a href="index.html">
-          <img style="height: 55px;" src="images/nitj.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a> -->
-        <a target="_blank" href="https://ewh.ieee.org/r10/calcutta/">
-          <img style="height: 45px;" src="images/IEEEkol.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a>
-        <a target="_blank" href="https://www.ieee.org/">
-          <img style="height: 45px;" src="images/ieeen.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a>
-        <a target="_blank" href="https://www.ieee-ies.org/">
-          <img style="height: 45px;" src="images/ies.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="45">
-        </a>
-        <a target="_blank" href="https://vlsisocietyofindia.org/">
-          <img style="height: 45px;" src="images/vlsi-logo.webp" alt="logo" class="mb-1 mx-auto img-fluid" width="70" height="45">
-        </a>
-      </div>
+  <nav class="navbar">
+    <div class="navbar-wave">
+      <!-- Layer 1: Darker Base Wave -->
+      <svg class="wave wave1" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#003366" />
+            <stop offset="100%" stop-color="#004c99" />
+          </linearGradient>
+        </defs>
+        <path d="M0,90 C100,20 300,120 400,10 L400,100 L0,100 Z" fill="url(#grad1)" />
+      </svg>
+
+      <!-- Layer 2: Mid Blue -->
+      <svg class="wave wave2" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0052a5" />
+            <stop offset="100%" stop-color="#007bff" />
+          </linearGradient>
+        </defs>
+        <path d="M0,80 C120,40 280,110 400,20 L400,100 L0,100 Z" fill="url(#grad2)" />
+      </svg>
+
+      <!-- Layer 3: Lighter Top Wave -->
+      <svg class="wave wave3" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#33ccff" />
+            <stop offset="100%" stop-color="#66d9ff" />
+          </linearGradient>
+        </defs>
+        <path d="M0,70 C150,50 250,100 400,30 L400,100 L0,100 Z" fill="url(#grad3)" />
+      </svg>
     </div>
 
 
-    <div class="container-fluid">
-      <div class="main-logo">
-        <a href="index.html">
-          <img style="height: 75px;" src="images/logo.gif" alt="logo" class="mb-0 mx-auto img-fluid" width="100" height="100">
-        </a>
+    <!-- Left Logo -->
+    <div class="logo left-logo">
+      <a href="index.html">
+        <img src="assets/ice2cptLogo.gif" alt="Left Logo" />
+      </a>
+    </div>
+
+    <!-- Center Content -->
+    <div class="center-content">
+      <div class="sponsors">
+        <img src="assets/nitlogosc.png" alt="Sponsor 1" />
+        <img src="assets/ieeen.png" alt="Sponsor 2" />
+        <img src="assets/IEEEKSpng.png" alt="Sponsor 3" />
+        <img src="assets/ies.png" alt="Sponsor 4" />
+        <img src="assets/vlsi-logo.webp" alt="Sponsor 5" />
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body justify-content-end">
-          <ul class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0">
-            <li class="nav-item text-capitalize text-center">
-              <a href="generalchair.html" class="nav-link mx-1">General Chair</a>
-            </li>
 
-            <li class="nav-item dropdown text-white">
-              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Committee</a>
-              <ul class="dropdown-menu" aria-labelledby="pages">
-                <li><a href="internationaladvisory.html" class="dropdown-item">Advisory Committee</a></li>
-                <li><a href="organizingcommittee.html" class="dropdown-item">Organizing Committee</a></li>
-                <li><a href="technicalprogramcommittee.html" class="dropdown-item">Technical Program Committee</a></li>
-               </ul>
-            </li>
-            
-            <li class="nav-item dropdown text-white">
-              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Authors</a>
-              <ul class="dropdown-menu" aria-labelledby="pages">
-                <li><a href="callforpapers.html" class="dropdown-item">Call for Papers</a></li>
-                <li><a href="SS.html" class="dropdown-item">Call for Special Session</a></li>
-                <li><a href="crucialdates.html" class="dropdown-item">Important Dates</a></li>
-                <li><a href="manuscriptsubmission.html" class="dropdown-item">Paper Submission Guidelines</a></li>
-                <li><a href="confprogram.html" class="dropdown-item">Conference Program</a></li>
-                </ul>
-            </li>
+      <ul class="menu">
+        <li><a href="generalchair.html">General Chair</a></li>
 
-            <li class="nav-item text-capitalize text-center">
-              <a href="keynotespeakers.html" class="nav-link mx-1">Speakers</a>
-            </li>
-                        
-         <li class="nav-item text-light">
-              <a href="sponsorship.html" class="nav-link mx-1">Sponsors</a>
-            </li>
-
-            <li class="nav-item text-light">
-              <a href="registrationdetails.html" class="nav-link mx-1">Registration</a>
-            </li>
-
-            <li class="nav-item text-light">
-              <a href="contact.html" class="nav-link mx-1">Contact Us</a>
-            </li>
-            
-            </li>
+        <li class="dropdown">
+          <a href="#">Committee</a>
+          <ul class="dropdown-content">
+            <li><a href="internationaladvisory.html">Advisory Committee</a></li>
+            <li><a href="organizingcommittee.html">Organizing Committee</a></li>
+            <li><a href="technicalprogramcommittee.html">Technical Program Committee</a></li>
           </ul>
-          <div class="d-none d-lg-flex align-items-center ms-5">
-            <ul class="d-flex justify-content-end list-unstyled m-0">
-            <ul class="d-flex justify-content-end  list-unstyled m-0">
-            </ul>
-          </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Authors</a>
+          <ul class="dropdown-content">
+            <li><a href="callforpapers.html">Call for Papers</a></li>
+            <li><a href="SS.html">Call for Special Session</a></li>
+            <li><a href="crucialdates.html">Important Dates</a></li>
+            <li><a href="manuscriptsubmission.html">Paper Submission Guidelines</a></li>
+            <li><a href="confprogram.html">Conference Program</a></li>
+          </ul>
+        </li>
+
+        <li><a href="keynotespeakers.html">Speakers</a></li>
+        <li><a href="sponsorship.html">Sponsors</a></li>
+        <li><a href="registrationdetails.html">Registration</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
-    <div class="container-fluid d-lg-none">
-      <div class="d-flex align-items-end mt-3">
-      </div>
+
+    <!-- Right Logo -->
+    <div class="burger">
+     <i class="fa-solid fa-bars fa-xl"></i>
     </div>
+    <div class="logo right-logo">
+      <img class="rightlogo" src="assets/NIT-jamshedpur-logo-113X160.png" alt="Right Logo" />
+    </div>
+
   </nav>
 
       
     <!-- Main Content -->
     <main class="flex-grow p-10 bg-white">
         <!-- Welcome Message -->
-        <section class="mb-10 text-center">
-            <h3 class="text-5xl text-black-500 mb-4 mt-40 font-bold">Sponsorship</h3>
-            <h1 class="text-2xl text-blue-500 mb-4 mt-10 font-bold">Our Technical Sponsors</h1>
-          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-7">
-            <div class="p-1 bg-white shadow-md rounded-lg">
-              <img src="images/ieeen.png" alt="Member 1" class="w-30 h-40 mx-auto  mb-1">
-            </div>
-            <div class="p-1 bg-white shadow-md rounded-lg text-center">
-              <img src="images/IEEEkol.png" alt="Member 1" class="w-30 h-40 mx-auto  mb-1 ">
-            </div>
-            <div class="p-1 bg-white shadow-md rounded-lg text-center">
-              <img src="images/ies.png" alt="Member 1" class="w-30 h-40 mx-auto  mb-1 img-thumbnail">
-            </div>
-            <div class="p-1 bg-white shadow-md rounded-lg text-center">
-              <img src="images/nitiee.png" alt="Member 1" class="w-30 h-40 mx-auto  mb-1 img-thumbnail">
-            </div>
-            <div class="p-1 bg-white shadow-md rounded-lg text-center">
-              <img src="images/NITJSRlOGO.png" alt="Member 1" class="w-30 h-40 mx-auto  mb-1 img-thumbnail">
-            </div>
-            <div class="p-1 bg-white shadow-md rounded-lg text-center">
-              <img src="images/vlsi-logo.webp" alt="Member 1" class="w-30 h-40 mx-auto  mb-1 img-thumbnail">
-            </div>
+        <section class="mb-5">
+          <div class="styleheading mt-40 mb-3">
+            <span class="nitish">Sponsorship</span>
           </div>
-        </section>
+          <div class="slider">
+              <div class="slider-items">
+                  <img src="images/ieeen.png" alt="">
+                  <img src="images/IEEEkol.png" alt="">
+                  <img src="images/ies.png" alt="">
+                  <img src="images/nitiee.png" alt="">
+                  <img src="images/NITJSRlOGO.png" alt="">
+                  <img src="images/vlsi-logo.webp" alt="">
+                  <img src="images/ieeen.png" alt="">
+                  <img src="images/IEEEkol.png" alt="">
+                  <img src="images/ies.png" alt="">
+                  <img src="images/nitiee.png" alt="">
+                  <img src="images/NITJSRlOGO.png" alt="">
+                  <img src="images/vlsi-logo.webp" alt="">
+                  <img src="images/ieeen.png" alt="">
+                  <img src="images/IEEEkol.png" alt="">
+                  <img src="images/ies.png" alt="">
+                  <img src="images/nitiee.png" alt="">
+                  <img src="images/NITJSRlOGO.png" alt="">
+                  <img src="images/vlsi-logo.webp" alt="">
+                  
+              </div>
+          </div>
+  
+      </section>
     
         <!-- Financial Sponsorship -->
         <section class="text-center">
-          <h1 class="text-2xl text-blue-500 mb-4 mt-10 font-bold">Our Financial Sponsors</h1>
-            <p class="text-gray-800 max-w-6xl text-justify mx-auto">
-              We invite various companies/research organization/Academic Institutes to become Sponsors of 1st IEEE International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend (ICE2CPT) that is to be organized by the Department of Electrical Engineering, National Institute of Technology Jamshedpur, Jharkhand, India during 29th to 31st October, 2025.
-            </p>
-            <p class="text-gray-600 max-w-3xl mx-auto">
+          <!-- <h1 class="text-2xl text-blue-500 mb-4 mt-10 font-bold">Our Financial Sponsors</h1> -->
+            <div class="spbenefit mb-4">
+              <p class="text-gray-800 max-w-6xl text-justify mx-auto mb-4">
+                We invite various companies/research organization/Academic Institutes to become Sponsors of 1st IEEE International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend (ICE2CPT) that is to be organized by the Department of Electrical Engineering, National Institute of Technology Jamshedpur, Jharkhand, India during 29th to 31st October, 2025.
+              </p>
+            </div>
               <h1 class="text-lg bg-yellow-300 text-green py-2 font-bold rounded-md">Sponsorship benefits at Glance</h1>
-              <img class="d-block img-fluid w-200 my-2 mx-auto border h-75 rounded p-3 py-2" src="images/sponsor.jpg" >
+              <div class="spbenefit">
+                <img class="w-90 h-90" src="images/sponsor.jpg" >
+              </div>
   
             </div>
         </section>
     </main>
     
         <!-- Footer-->
-        <footer class="bg-black text-center py-5">
-          <div class="container px-5">
-              <div class="text-white-50 large">
-                  <div class="mb-2">&copy; ICE2CPT-2025. All Rights Reserved.</div>
-                  <span class="mx-1">&middot;</span>
-                  <a href="./about.html">About Us</a>
-                  <span class="mx-1">&middot;</span>
-                  <a href="./venue.html">Key Attractions</a>
-                  <span class="mx-1">&middot;</span>
-                  <a href="https://nitjsr.ac.in/" target="_blank" rel="noreferrer nofollow">NITJSR Website</a>
-                  <hr>
-                  <div class="mb-2">Developed by Electrical Engineering, NIT Jamshedpur</div>
-              </div>
-          </div>
-      </footer>
 
+        <div class="footerBody">
+          <footer class="footer">
+            <div class="container5">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <h3>Brought to you by :</h3>
+                    <div class="logo-container">
+      
+                        <div class="logo-item">
+                            <img src="assets/nitlogosc.png">
+                        </div>
+                        <div class="logo-item">
+                            <img src="assets/ieeen.png">
+                        </div>
+                        <div class="logo-item">
+                            <img src="assets/IEEEKSpng.png">
+                        </div>
+                        <div class="logo-item">
+                            <img src="assets/ies.png" alt="Partner Logo 3">
+                        </div>
+                        <div class="logo-item">
+                            <img src="assets/vlsi-logo.webp" alt="Partner Logo 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="row mt-4">
+                    <!-- Social Media -->
+                   <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+                        <h5>Follow Us On Social:</h5>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/ice2cpt?igsh=MXFlYmUwc2RsczdzNA=="><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/ice2cpt/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links with Split Layout -->
+                    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0 quick-links-section">
+                        <h5>Quick Links</h5>
+                        <div class="links-container">
+                            <div class="links-left">
+                                <ul class="footer-links">
+                                    <li><a href="https://ice2cpt.com/">Home</a></li>
+                                    <li><a href="organizingcommittee.html">organizingcommittee</a></li>
+                                    <li><a href="callforpapers.html">Call for Papers</a></li>
+                                </ul>
+                            </div>
+                            <div class="links-right">
+                                <ul class="footer-links">
+                                    <li><a href="https://ice2cpt.com/venue.html">Key Attractions</a></li>
+                                    <li><a href="https://www.nitjsr.ac.in">NIT JSR Website</a></li>
+                                    <li><a href="registrationdetails.html">Register Now</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Us -->
+                    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+                      <!--  <h5>Contact Us</h5>
+                        <ul class="footer-links text-center">
+                            <li><a href="mailto:ice2cpt@gmail.com">ice2cpt@gmail.com</a></li>
+                            <li><a href="mailto:suryaprakash.ee@nitjsr.ac.in">suryaprakash.ee@nitjsr.ac.in</a></li>
+                            <li><a href="mailto:krnishant125@gmail.com">krnishant125@gmail.com</a></li>
+                        </ul> -->
+                        <div class="visitor-counter">
+                            <!-- <a href="http://s01.flagcounter.com/more/q6v"><img src="https://s01.flagcounter.com/count2/q6v/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a> -->
+                            <a href="https://www.flagcounter.me/details/fKF"><img src="https://www.flagcounter.me/fKF/" alt="Flag Counter"></a>
+                        </div>
+        
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="row footer-bottom">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0">© ICE2CPT-2025. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        </div>
+
+        
+<!-- NAVBAR SHRINK -->
+<script>
+  window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+</script>
+<!-- toggle menu -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu');
+    let menuVisible = false;
+
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menuVisible = !menuVisible;
+      menu.classList.toggle('menu-active', menuVisible);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (menuVisible && !menu.contains(e.target) && !burger.contains(e.target)) {
+        menu.classList.remove('menu-active');
+        menuVisible = false;
+      }
+    });
+  });
+</script>
 
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

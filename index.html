@@ -1,619 +1,876 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
 
-  <title>ICE2CPT - International Conference on Electrical, Electronics and Computer Science with Advance Power Technologies- A Future Trend</title>
-  <meta charset="utf-8">
-  <link rel="icon" href="images/logo1.png" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="author" content="">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/vendor.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="images/item2.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice2cpt</title>
+    
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- THIS IS FOR NAVBAR SO PLEASE DON'T DO ANYTHING HERE -->
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    @keyframes waveMove {
+      0% {
+        transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
+      }
+
+      25% {
+        transform: translateX(-15px) scaleY(1.03) rotate(180deg) scaleX(-1);
+      }
+
+      50% {
+        transform: translateX(-30px) scaleY(1.01) rotate(180deg) scaleX(-1);
+      }
+
+      75% {
+        transform: translateX(-15px) scaleY(1.04) rotate(180deg) scaleX(-1);
+      }
+
+      100% {
+        transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
+      }
+    }
+
+
+    .navbar-wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 17rem;
+      transform: scaleX(-1);
+      transform: rotate(180deg);
+      pointer-events: none;
+      animation: waveMove 4s infinite;
+    }
+
+    /* Stack layers with slight offsets for depth */
+    .wave1 {
+      z-index: 1;
+      opacity: 0.9;
+      animation-delay: 0s;
+    }
+
+    .wave2 {
+      z-index: 2;
+      opacity: 0.7;
+      animation-delay: 1s;
+    }
+
+    .wave3 {
+      z-index: 3;
+      opacity: 0.6;
+      animation-delay: 2s;
+    }
+
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background-color: #dfe5e8;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px 5%;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar.shrink {
+      padding: 10px 5%;
+    }
+
+    .logo {
+      width: 9rem;
+      transition: transform 0.4s ease;
+    }
+
+    .left-logo img {
+      height: auto;
+      width: 10rem;
+    }
+
+    .right-logo img {
+      height: 10rem;
+      width: auto;
+    }
+
+    .navbar.shrink .logo {
+      transform: scale(0.8);
+    }
+
+    /* .logo img {
+        width: 10rem;
+        height: auto;
+      } */
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: calc(100% - 200px);
+      flex: 1;
+      transition: all 0.4s ease;
+    }
+
+    .sponsors {
+      display: flex;
+      gap: 6rem;
+      justify-content: center;
+      margin-bottom: 32px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      flex-wrap: wrap;
+      border-radius: 5px;
+      animation: fadeSlideIn 1s ease forwards;
+    }
+
+    .sponsors img {
+      height: 3.5rem;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .sponsors img:hover {
+      transform: scale(1.1);
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      transition: all 0.3s ease;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.5s, transform 0.5s ease;
+      display: inline-block;
+    }
+
+    .menu a:hover {
+      background-color: #002b5c;
+      /* dark blue */
+      color: #fff;
+      /* white text */
+      transform: scale(1.05);
+    }
+
+    /* Dropdown styles */
+    .dropdown-content {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #c4c4c4;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: perspective(600px) rotateX(-10deg) translateY(10px);
+      transition: all 0.5s ease;
+      transform-origin: top;
+      z-index: 10;
+      min-width: 220px;
+      padding: 10px 0;
+    }
+
+    .dropdown-content li {
+      padding: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 1.3rem;
+      color: #333;
+      white-space: nowrap;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #002b5c;
+      /* dark blue */
+      color: #fff;
+      /* white text */
+      transform: scale(1.05);
+    }
+
+    /* Show dropdown on hover */
+    .menu li.dropdown:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: perspective(600px) rotateX(0deg) translateY(0);
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles */
+   .burger{
+    display: none;
+   }
+
+   @media screen and (max-width: 1400px) {
+    .menu{
+      gap: 0px;
+    }
+    .menu a{
+      font-size: 0.9rem;
+    }
+    .sponsors{
+      gap: 2rem;
+    }
+}
+   @media screen and (max-width: 850px) {
+    .burger{
+      top: 3.7rem;
+      right: 1rem;
+       position: relative;
+      display: block;
+   }
+
+   .menu {
+    display: flex; /* default is flex so transition works */
+    flex-direction: column;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 7.5rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
+  }
+
+  .menu.menu-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scaleY(1);
+  }
+
+  .menu li {
+    position: relative;
+    margin: 0.5rem 0;
+  }
+
+  .menu .dropdown-content {
+  position: absolute;
+  top: 0;
+  left: -220px; /* Adjust as needed */
+  background-color: #fff;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* min-width: 150px; */
+  flex-direction: column;
+}
+
+.menu .dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.menu .dropdown-content li {
+  margin: 0.5rem 0;
+}
+
+
+  /* .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  } */
+
+  .center-content {
+    display: flex; /* Keep center-content active */
+  }
+
+  .sponsors {
+    display: none; /* Hide only unwanted items */
+  }
+
+  .right-logo {
+    display: none;
+  }
+  .hero-sec h1{
+   font-size: x-large;
+  }
+  
+  .about-flex-box{
+   flex-direction: column;
+  }
+  .paragraph{
+     font-size: 1rem;
+   }
+   section h4 {
+     text-align: center;
+     font-size: 2rem;
+     font-weight: 500;
+   }
+}
+  </style>
+
+
 </head>
 
 <body>
- 
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <defs>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="link" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12 19a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0-4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm-5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm7-12h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Zm1 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V6a1 1 0 0 1 1-1h1v1a1 1 0 0 0 2 0V5h8v1a1 1 0 0 0 2 0V5h1a1 1 0 0 1 1 1ZM7 15a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-right" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="category" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 5.5h-6.28l-.32-1a3 3 0 0 0-2.84-2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h4.56a1 1 0 0 1 .95.68l.54 1.64a1 1 0 0 0 .95.68h7a1 1 0 0 1 1 1Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="calendar" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M8.5 19a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 8.5 19ZM19 16H7a1 1 0 0 1 0-2h8.491a3.013 3.013 0 0 0 2.885-2.176l1.585-5.55A1 1 0 0 0 19 5H6.74a3.007 3.007 0 0 0-2.82-2H3a1 1 0 0 0 0 2h.921a1.005 1.005 0 0 1 .962.725l.155.545v.005l1.641 5.742A3 3 0 0 0 7 18h12a1 1 0 0 0 0-2Zm-1.326-9l-1.22 4.274a1.005 1.005 0 0 1-.963.726H8.754l-.255-.892L7.326 7ZM16.5 19a1.5 1.5 0 1 0 1.5 1.5a1.5 1.5 0 0 0-1.5-1.5Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="trash" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M10 18a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1ZM20 6h-4V5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v1H4a1 1 0 0 0 0 2h1v11a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8h1a1 1 0 0 0 0-2ZM10 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1h-4Zm7 14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8h10Zm-3-1a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="star-outline" viewBox="0 0 15 15">
-        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.5 9.804L5.337 11l.413-2.533L4 6.674l2.418-.37L7.5 4l1.082 2.304l2.418.37l-1.75 1.793L9.663 11L7.5 9.804Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="star-solid" viewBox="0 0 15 15">
-        <path fill="currentColor" d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 15 15">
-        <path fill="currentColor" d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"></path>
-      </symbol>
-    </defs>
-  </svg>
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="list-group mb-4">
-        <li class="list-group-item d-flex justify-content-between align-items-center py-3 lh-sm">
-          <div>
-            <h6 class="my-0">Marketing Course</h6>
-            <small class="text-body-secondary">Brief description</small>
-          </div>
-          <span class="text-body-secondary">$120</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center py-3 lh-sm">
-          <div>
-            <h6 class="my-0">Strategy Course</h6>
-            <small class="text-body-secondary">Brief description</small>
-          </div>
-          <span class="text-body-secondary">$80</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center py-3 lh-sm">
-          <div>
-            <h6 class="my-0">Digital Course</h6>
-            <small class="text-body-secondary">Brief description</small>
-          </div>
-          <span class="text-body-secondary">$50</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
-          <span class="fw-bold">Total (USD)</span>
-          <strong>$250</strong>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- nav  -->
 
-      
-  <nav class="main-menu d-flex navbar fixed-top navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4 mx-auto">
+  <nav class="navbar">
+    <div class="navbar-wave">
+      <!-- Layer 1: Darker Base Wave -->
+      <svg class="wave wave1" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#003366" />
+            <stop offset="100%" stop-color="#004c99" />
+          </linearGradient>
+        </defs>
+        <path d="M0,90 C100,20 300,120 400,10 L400,100 L0,100 Z" fill="url(#grad1)" />
+      </svg>
 
-    <div class="w-100 py-2 border-bottom" style="background-color: #efefef9b; border-radius: 30px;" >
-      <div class="container d-flex justify-content-between align-items-center">
-        <a target="_blank" href="https://nitjsr.ac.in/">
-          <img style="height: 45px;" src="images/NITJSRNEWLOG.png" alt="logo" class="mb-1 mx-auto img-fluid" width="400" height="40">
-        </a>
-        <a target="_blank" href="https://ieeenitjsr.netlify.app/">
-          <img style="height: 45px;" src="images/nitlogosc.png" alt="logo" class="mb-1 mx-auto img-fluid" width="70" height="45">
-        </a>
-        <!-- <a href="index.html">
-          <img style="height: 55px;" src="images/nitj.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a> -->
-        <a target="_blank" href="https://ewh.ieee.org/r10/calcutta/">
-          <img style="height: 45px;" src="images/IEEEkol.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a>
-        <a target="_blank" href="https://www.ieee.org/">
-          <img style="height: 45px;" src="images/ieeen.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="25">
-        </a>
-        <a target="_blank" href="https://www.ieee-ies.org/">
-          <img style="height: 45px;" src="images/ies.png" alt="logo" class="mb-1 mx-auto img-fluid" width="100" height="45">
-        </a>
-        <a target="_blank" href="https://vlsisocietyofindia.org/">
-          <img style="height: 45px;" src="images/vlsi-logo.webp" alt="logo" class="mb-1 mx-auto img-fluid" width="70" height="45">
-        </a>
-      </div>
+      <!-- Layer 2: Mid Blue -->
+      <svg class="wave wave2" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0052a5" />
+            <stop offset="100%" stop-color="#007bff" />
+          </linearGradient>
+        </defs>
+        <path d="M0,80 C120,40 280,110 400,20 L400,100 L0,100 Z" fill="url(#grad2)" />
+      </svg>
+
+      <!-- Layer 3: Lighter Top Wave -->
+      <svg class="wave wave3" viewBox="0 0 400 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#33ccff" />
+            <stop offset="100%" stop-color="#66d9ff" />
+          </linearGradient>
+        </defs>
+        <path d="M0,70 C150,50 250,100 400,30 L400,100 L0,100 Z" fill="url(#grad3)" />
+      </svg>
     </div>
 
 
-    <div class="container-fluid">
-      <div class="main-logo">
-        <a href="index.html">
-          <img style="height: 75px;" src="images/logo.gif" alt="logo" class="mb-0 mx-auto img-fluid" width="100" height="100">
-        </a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body justify-content-end">
-          <ul class="navbar-nav menu-list list-unstyled align-items-lg-center d-flex gap-md-3 mb-0">
-            <li class="nav-item text-capitalize text-center">
-              <a href="generalchair.html" class="nav-link mx-1">General Chair</a>
-            </li>
-
-            <li class="nav-item dropdown text-white">
-              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Committee</a>
-              <ul class="dropdown-menu" aria-labelledby="pages">
-                <li><a href="internationaladvisory.html" class="dropdown-item">Advisory Committee</a></li>
-                <li><a href="organizingcommittee.html" class="dropdown-item">Organizing Committee</a></li>
-                <li><a href="technicalprogramcommittee.html" class="dropdown-item">Technical Program Committee</a></li>
-               </ul>
-            </li>
-            
-            <li class="nav-item dropdown text-white">
-              <a class="nav-link mx-2 dropdown-toggle align-items-center" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Authors</a>
-              <ul class="dropdown-menu" aria-labelledby="pages">
-                <li><a href="callforpapers.html" class="dropdown-item">Call for Papers</a></li>
-                <li><a href="SS.html" class="dropdown-item">Call for Special Session</a></li>
-                <li><a href="crucialdates.html" class="dropdown-item">Important Dates</a></li>
-                <li><a href="manuscriptsubmission.html" class="dropdown-item">Paper Submission Guidelines</a></li>
-                <li><a href="confprogram.html" class="dropdown-item">Conference Program</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item text-capitalize text-center">
-              <a href="keynotespeakers.html" class="nav-link mx-1">Speakers</a>
-            </li>
-                        
-         <li class="nav-item text-light">
-              <a href="sponsorship.html" class="nav-link mx-1">Sponsors</a>
-            </li>
-
-            <li class="nav-item text-light">
-              <a href="registrationdetails.html" class="nav-link mx-1">Registration</a>
-            </li>
-
-            <li class="nav-item text-light">
-              <a href="contact.html" class="nav-link mx-1">Contact Us</a>
-            </li>
-            
-            </li>
-          </ul>
-          <div class="d-none d-lg-flex align-items-center ms-5">
-            <ul class="d-flex justify-content-end list-unstyled m-0">
-            <ul class="d-flex justify-content-end  list-unstyled m-0">
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid d-lg-none">
-      <div class="d-flex align-items-end mt-3">
-      </div>
-    </div>
-  </nav>
-
-  
-  <!-- <section id="hero">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="carousel slide" data-ride="carousel" id="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active"> <img class="d-block img-fluid w-100 my-5 mx-auto border h-75 rounded p-2 py-5" src="images/nitj.jpg">
-              </div>
-              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-bubble-light.svg">
-                <div class="carousel-caption">
-                  <h5 class="m-0">Carousel</h5>
-                  <p>with controls</p>
-                </div>
-              </div>
-              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-moon.svg">
-                <div class="carousel-caption">
-                  <h5 class="m-0">Carousel</h5>
-                  <p>with controls</p>
-                </div>
-              </div>
-            </div> <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carousel" role="button" data-slide="next"> <span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span> </a>
-          </div>
-        </div>
-      </div>
-      <div class="row text-center text-capitalize w-100" style=""><img src="images/logo.gif" alt="img" class="img-fluid custom-img img-thumbnail w-25 h-25 float-left" style="" width="0" height="0">
-        <div class="col-md-8" style="">
-          <h1 class="text-center text-capitalize w-100 my-5" style="">International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend</h1>
-          <h1 class="text-center text-capitalize w-100 my-5">OCTOBER 29 - 31 2025</h1>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <section id="hero">
-    <div class="container-fluid">
-
-
-
-      
-      <div class="row">
-        <div class="col-md-15">
-          <div class="carousel slide" data-ride="carousel" id="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active"> 
-                <img class="d-block img-fluid w-200 my-2 mx-auto border h-75 rounded p-3 py-2" src="images/NITCON.png" >
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-       </div>
-  </section>
-
-  <div class="marquee-container">
-    <div class="marquee-content">
-      <a href="https://cmt3.research.microsoft.com/ICE2CPT2025">Click Here for Paper Submission</a> 
-        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-        <a href="Special Session Template.pdf">Click Here for Special Session Proposal</a>
-        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-        <a href="SSPT.docx">Click Here to download Special Session Template</a>
-        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-        <a href="CPICE2CPT.pdf">Click Here to Call for Papers Brochure </a>
-        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-        <a href="venue.html">Click Here to view Key attraction at Jamshedpur </a>
-    </div>
-</div>
-
-<style>
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: black;
-    padding: 10px;
-    color: rgb(11, 3, 3);
-    font-size: 20px;
-    white-space: nowrap;
-}
-
-.marquee-content {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee-scroll 20s linear infinite;
-}
-
-@keyframes marquee-scroll {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
-}
-
-.marquee-container a {
-    color: white;
-    text-decoration: none;
-}
-.marquee-container:hover .marquee-content {
-    animation-play-state: paused; /* Stops when hovered */
-}
-.marquee-container a:hover {
-    text-decoration: underline;
-}
-.marquee-container:hover .marquee-content {
-  animation-play-state: paused; /* Stops when hovered */
-}
-</style>
-
-
-
-
-
-
-  
-</section>
-<style> @media (min-width: 992px) { /* Applies to large screens (≥992px) */
-    .custom-img {
-      margin-top: 90px;
-      margin-left: 65px;
-    }
-  }
-</style>
-
-<section id="service" class="padding- 12px ">
-  <div class="container">
-    <div class="text-center">
-      <h3 class="display-5 fw-semibold"><span style="color: rgb(17, 17, 112);"> Welcome to ICE2CPT-2025</span></h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="countdown-paper" class="container-fluid my-5">
-  <div class="row">
-    <!-- Countdown Section (Left) -->
-    <!-- Countdown Section -->
-    <div class="col-md-5">
-      <div id="countdown" class="text-center custom-box">
-        <h2 class="countdown-heading">Countdown of the Conference</h2>
-        <div id="counter" class="counter"></div>
-        <script>
-          function updateCountdown() {
-              const targetDate = new Date('October 29, 2025 00:00:00').getTime();
-              const now = new Date().getTime();
-              const timeLeft = targetDate - now;
-              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-              document.getElementById('counter').innerText = `${days} days ${hours} hour ${minutes} min ${seconds} sec`;
-          }
-          setInterval(updateCountdown, 1000);
-          updateCountdown();
-      </script>
-      <style>
-        body {
-          font-size: 1.2em;  
-          font-family: sans-serif;
-          font-weight: bold;
-          color: darkblue;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .counter {
-            font-size: 1.4em;
-            margin: 10px;
-        }
-    </style>
-      </div>
-    </div>
-
-    <!-- Welcome -->
-    <div class="col-md-2">
-      <a target="_blank">
-        <img style="height: 100px;" src="images/wel.png" alt="logo" class="mb-1 mx-auto img-fluid" width="400" height="100">
+    <!-- Left Logo -->
+    <div class="logo left-logo">
+      <a href="index.html">
+        <img src="assets/ice2cptLogo.gif" alt="Left Logo" />
       </a>
     </div>
 
-    <!-- Paper Submission Section (Right) -->
-    <div class="col-md-5">
-      <div id="paper-submission" class="text-center p-2" style="background-color: rgba   1Z(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0px 0px 4px black, 0px 0px 4px black;">
-        <a target="_blank" href="https://cmt3.research.microsoft.com/ICE2CPT2025"> <h2 class="mb-3">Paper Submission</h2> <button class="btn btn-primary">Submit Paper</button> </a>
+    <!-- Center Content -->
+    <div class="center-content">
+      <div class="sponsors">
+        <img src="assets/nitlogosc.png" alt="Sponsor 1" />
+        <img src="assets/ieeen.png" alt="Sponsor 2" />
+        <img src="assets/IEEEKSpng.png" alt="Sponsor 3" />
+        <img src="assets/ies.png" alt="Sponsor 4" />
+        <img src="assets/vlsi-logo.webp" alt="Sponsor 5" />
       </div>
+
+      <ul class="menu">
+        <li><a href="generalchair.html">General Chair</a></li>
+
+        <li class="dropdown">
+          <a href="#">Committee</a>
+          <ul class="dropdown-content">
+            <li><a href="internationaladvisory.html">Advisory Committee</a></li>
+            <li><a href="organizingcommittee.html">Organizing Committee</a></li>
+            <li><a href="technicalprogramcommittee.html">Technical Program Committee</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Authors</a>
+          <ul class="dropdown-content">
+            <li><a href="callforpapers.html">Call for Papers</a></li>
+            <li><a href="SS.html">Call for Special Session</a></li>
+            <li><a href="crucialdates.html">Important Dates</a></li>
+            <li><a href="manuscriptsubmission.html">Paper Submission Guidelines</a></li>
+            <li><a href="confprogram.html">Conference Program</a></li>
+          </ul>
+        </li>
+
+        <li><a href="keynotespeakers.html">Speakers</a></li>
+        <li><a href="sponsorship.html">Sponsors</a></li>
+        <li><a href="registrationdetails.html">Registration</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
 
-    
+    <!-- Right Logo -->
+    <div class="burger">
+     <i class="fa-solid fa-bars fa-xl"></i>
+    </div>
+    <div class="logo right-logo">
+      <a href="https://nitjsr.ac.in/" target="_blank"><img class="rightlogo" src="assets/NIT-jamshedpur-logo-113X160.png" alt="Right Logo" /></a>
+    </div>
 
-  </div>
-</section>
+  </nav>
 
 
+  <!-- hero-section  -->
 
-   <!-- codes for if deadline ends -->
-  <section id="countdown" class="text-center my-9">
-    <!-- <h2 class="countdown-heading">Countdown of the Conference</h2> -->
-    <!-- <div id="countdown-timer" class="countdown-timer">The date has passed!</div> -->
-    <!-- <div id="countdown-timer" class="countdown-timer" style="	box-shadow: 0px 0px 4px  black, 0px 0px 4px  black;">The date has passed!</div> -->
-  </section>
+  <div class="nav-mar-top">
+    <div class="hero-section hero-sec">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/campusTour.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="left-heading">
+        <h1 class="titleh1">
+          International Conference on Electrical, Electronics and Computer Science with Advance Power Technologies - A
+          Future Trend
+        </h1>
+      </div>
   
- <!-- about section -->
-
- <section class="about_section layout_padding mt-5">
-  <div class="container ">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-           
-            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> ICE2CPT 2025 </span></h2>
-            
-          </div>
-          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
-            International Conference on Electrical, Electronics And Computer Science With Advance Power Technologies- A Future Trend (ICE2CPT) aims to provide a comprehensive platform for professionals, researchers, and industry experts to exchange knowledge and insights on emerging trends and innovations in electrical, electronics, and computer science domains. With a focus on advanced power technologies, the conference seeks to address critical challenges and opportunities in power systems, renewable energy integration, intelligent control systems, and energy-efficient solutions. Additionally, ICE2CPT emphasizes advancements in transmitter design, signal processing, signal transmission in channels, antenna design, and the design of overall control systems. The conference encourages interdisciplinary collaboration to explore the transformative potential of cutting-edge technologies, including artificial intelligence, IoT, and smart grids, in shaping the future of energy and communication systems. By fostering discussions on sustainable and innovative approaches, ICE2CPT aims to create a conducive environment for knowledge sharing and the development of next-generation solutions for a sustainable and interconnected future.
-          </p>
-        </div>
+      <div class="dates">
+        <i class="fa-solid fa-calendar-days calendar-icon"></i>
+        <p class="october">29–31 October, 2025</p>
       </div>
-
-      <div class="col-md-6">
-        <!-- <div class="detail-box"> -->
-        <div class="heading_container" id="venue">
+  
+      <div class="buttonAndCntdwn">
+        <div class="button-body">
           
-            <a target="_blank" href="https://nitjsr.ac.in/">
-              <img style="height: 400px;" src="images/abtimg.png" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="400">
-            </a>
-          
-        </div>
-       
-      </div>
-    </div>
-  </div>
-</section>
+          <a style="text-decoration: none;" href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICE2CPT2025" target="_blank">
+            <button class="available-for-btn">
+              <div class="circle">
+                <div class="dot"></div>
+                <div class="outline"></div>
+              </div>
+              Submit Paper
+            </button>
 
-
-
-<section class="about_section layout_padding mt-5">
-  <div class="container ">
-    <div class="row">
-      <div class="col-md-6">
-        <!-- <div class="detail-box"> -->
-        <div class="heading_container" id="venue">
-          <a target="_blank" href="https://nitjsr.ac.in/departments/eee#:~:text=The%20Department%20of%20Electrical%20Engineering%20was%20started%20in,well%20placed%20in%20both%20public%20and%20private%20sectors.">
-            <img style="height: 300px;" src="images/EEN.png" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="300">
           </a>
-          
         </div>
-        
-      </div>
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-            
-            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> Electrical Department </span></h2>
-            
+  
+        <div class="countdownBody">
+          <div class="countdown">
+            <div id="months" data-desc="Months" class="animate-in " style="--d:1800ms">
+              <span>2</span>
+              <span>0</span>
+            </div>
+            <div id="days" data-desc="Days" class="animate-in " style="--d:1500ms">
+              <span>2</span>
+              <span>0</span>
+            </div>
+            <div id="hours" data-desc="Hours" class="animate-in " style="--d:1200ms">
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div id="minutes" data-desc="minutes" class="animate-in " style="--d:800ms">
+              <span>1</span>
+              <span>2</span>
+            </div>
+            <div id="seconds" data-desc="seconds" class="animate-in " style="--d:500ms">
+              <span>0</span>
+              <span>1</span>
+            </div>
           </div>
-          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
-            
-            The Department of Electrical Engineering was started in 1960. The Department has been consistently producing quality Engineers since its inception and is also involved in research and development activities. The alumni of the department are well placed in both public and private sectors. In addition to the UG programme the department runs PG programme in Power Systems and Power Electronics and Drives and Ph.D. program in different areas of specialization. To emerge as a front-runner for catering latest needs of Power Sector, Electrical Industries, Public Service and to improve the quality of life with high human values. Imparting quality education and skills by establishing the state-of-the-art research facilities to students that further contributes to the socio–economic growth and eventually contributing to sustainable development of the society.
-          </p>
+          <div class="paracntdwn">Countdown of the Conference</div>
         </div>
       </div>
     </div>
   </div>
-</section>
+
+  <div class="swagatam">
+    <img class="swagat" src="assets/swagat2.png"/>
+  </div>
 
 
+<!-- ABOUT KA MAIN -->
+  <main>
+    <section>
+      <h4 class="about_IC-head">About ICE2CPT 2025</h4>
+      <div class="about-ice2cpt about-flex-box">
+        <div id="first" class="about-image about-ice2cpt-image"><img class="first"
+            src="assets/IMGIce2cpt.jpg">
 
-
-
-<section class="about_section layout_padding mt-5">
-  <div class="container ">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-           
-            <h2 class="display-7 fw-semibold">About <span style="color: blue;"> NIT Jamshedpur </span></h2>
-            
-          </div>
-          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
-            The National Institute of Technology Jamshedpur (NIT Jamshedpur), is an Institute of National Importance located at Jamshedpur, Jharkhand, India. Established as a Regional Institute of Technology in 1960, it was upgraded to NIT on 27 December 2002 with the status of Deemed University. It is one of the 31 NITs in India, and as such is directly under the control of the Ministry of Human Resource Development (MHRD). It is the third in the chain of eight NITs established as a part of the Second Five Year Plan (1956–61) by the Government of India. The Institute has twelve departments including engineering, science and humanities. The institute offers a 4-year Bachelor of Technology degree in the various streams. The institute also offers Master and Ph.D degrees in various streams. The institute is bound to the quest for academic excellence and good governance, growth of institute, admired and respected institute for students, employees and industry, innovative leader.
-          
+        </div>
+        <div class="about-ice2cpt-message about-flex-box-message">
+          <p class="paragraph">International Conference on Electrical, Electronics And Computer Science With Advance Power
+            Technologies- A Future Trend (ICE2CPT) aims to provide a comprehensive platform for professionals,
+            researchers,
+            and
+            industry experts to exchange knowledge and insights on emerging trends and innovations in electrical,
+            electronics,
+            and computer science domains. With a focus on advanced power technologies, the conference seeks to address
+            critical
+            challenges and opportunities in power systems, renewable energy integration, intelligent control systems,
+            and
+            energy-efficient solutions. Additionally, ICE2CPT emphasizes advancements in transmitter design, signal
+            processing,
+            signal transmission in channels, antenna design, and the design of overall control systems. The conference
+            encourages interdisciplinary collaboration to explore the transformative potential of cutting-edge
+            technologies,
+            including artificial intelligence, IoT, and smart grids, in shaping the future of energy and communication
+            systems.
+            By fostering discussions on sustainable and innovative approaches, ICE2CPT aims to create a conducive
+            environment
+            for knowledge sharing and the development of next-generation solutions for a sustainable and interconnected
+            future.
           </p>
         </div>
       </div>
 
-      <div class="col-md-6">
-        <!-- <div class="detail-box"> -->
-        <div class="heading_container" id="venue">
-          <a target="_blank" href="https://nitjsr.ac.in/">
-            <img style="height: 300px;" src="images/nitj.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="300">
-          </a>
-          
+      <h4 class="about_EE-head">About Electrical Department</h4>
+      <div class="about-EEdep about-flex-box">
+        <div class="about-about-EEdep-message about-flex-box-message">
+          <p class="paragraph">The Department of Electrical Engineering was started in 1960. The Department has been
+            consistently
+            producing quality Engineers since its inception and is also involved in research and development activities.
+            The
+            alumni of the department are well placed in both public and private sectors. In addition to the UG programme
+            the
+            department runs PG programme in Power Systems and Power Electronics and Drives and Ph.D. program in
+            different
+            areas
+            of specialization. To emerge as a front-runner for catering latest needs of Power Sector, Electrical
+            Industries,
+            Public Service and to improve the quality of life with high human values. Imparting quality education and
+            skills
+            by
+            establishing the state-of-the-art research facilities to students that further contributes to the
+            socio–economic
+            growth and eventually contributing to sustainable development of the society.
+          </p>
         </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
+        <div id="second" class="about-image about-EEdep-image">
+          <img class="Second" src="assets/EED1.jpg">
 
-
-
-
-
-<section class="about_section layout_padding mt-5">
-  <div class="container ">
-    <div class="row">
-      <div class="col-md-6">
-        <!-- <div class="detail-box"> -->
-        <div class="heading_container" id="venue">
-          <a target="_blank" href="https://www.tripadvisor.in/Attractions-g662321-Activities-Jamshedpur_East_Singhbhum_District_Jharkhand.html">
-            <img style="height: 350px;" src="images/jam.jpg" alt="logo" class="mb-1 mx-auto img-fluid" width="800" height="350">
-          </a>
-          
         </div>
-       
       </div>
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-            
-            <h2 class="display-7 fw-semibold">Places to visit in <span style="color: blue;">Jamshedpur </span></h2>
-            
-          </div>
-          <p style="font-weight: normal; color:black;font-size: 16px; text-align:justify">
-            Jamshedpur, also known as Tatanagar, is a major industrial city in eastern India. It is the largest city in the state of Jharkhand. In terms of economy Jamshedpur has second largest economy in Jharkhand after Dhanbad. Jamshedpur stands as the third largest metropolitan area in the region. The modern city of Jamshedpur was established in 1912. It was named after industrialist Jamshedji Tata, who laid foundation of Asia's first steel plant in the city and established Tata Group. The city played active role in the World War I. It was a high value target during the Second World War. Following the independence of India, the city became part of Bihar. Jamshedpur was impacted severely by the communal riots in 1964 and 1979. It was also a centre of the statehood movement. In 2000, the city became part of newly-formed Jharkhand state. Jamshedpur has many industries, greenery, and with a very beautiful climate. Dalma hills, Dimna lake, Hudco lake, Tata steel, Zoological park, Bhuvaneshwari temples, Jubilee park, etc, these are the major attractions in Jamshedpur where you can visit. 
+
+      <h4 class="about_nit-head">About NIT Jasmshedpur</h4>
+      <div class="about-nit about-flex-box">
+        <div id="third" class="about-image about-nit-image"><img class="third"
+            src="assets/nit-jamshedpur-placement (1).jpg">
+
+        </div>
+        <div class="about-about-nit-message about-flex-box-message">
+          <p class="paragraph">The National Institute of Technology Jamshedpur (NIT Jamshedpur), is an Institute of
+            National
+            Importance located at Jamshedpur, Jharkhand, India. Established as a Regional Institute of Technology in
+            1960,
+            it
+            was upgraded to NIT on 27 December 2002 with the status of Deemed University. It is one of the 31 NITs in
+            India,
+            and
+            as such is directly under the control of the Ministry of Human Resource Development (MHRD). It is the third
+            in
+            the
+            chain of eight NITs established as a part of the Second Five Year Plan (1956–61) by the Government of India.
+            The
+            Institute has twelve departments including engineering, science and humanities. The institute offers a
+            4-year
+            Bachelor of Technology degree in the various streams. The institute also offers Master and Ph.D degrees in
+            various
+            streams. The institute is bound to the quest for academic excellence and good governance, growth of
+            institute,
+            admired and respected institute for students, employees and industry, innovative leader.
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
 
+    </section>
+  </main>
 
-  <!-- Visitor counter
-  <div class="heading_container" id="venue">
-  <section class="about_section layout_padding mt-5">
-    <div class="container ">
-      <div class="row">
+  <div class="footerBody">
+    <footer class="footer">
+      <div class="container5">
+          <!-- Logo Section -->
+          <div class="logo-section">
+              <h3>Brought to you by :</h3>
+              <div class="logo-container">
 
-        <h2>Visitor's Counter</h2>
-    <p>Number of Visits: <span id="visitorCount">0</span></p>
-
-    <script>
-        // Retrieve visitor count from local storage
-        let count = localStorage.getItem("visitorCount");
-
-        if (count === null) {
-            count = 1; // First visit
-        } else {
-            count = parseInt(count) + 1; // Increment count
-        }
-
-        // Store updated count in local storage
-        localStorage.setItem("visitorCount", count);
-
-        // Display the count
-        document.getElementById("visitorCount").innerText = count;
-    </script>  
+                  <div class="logo-item">
+                      <img src="assets/nitlogosc.png">
+                  </div>
+                  <div class="logo-item">
+                      <img src="assets/ieeen.png">
+                  </div>
+                  <div class="logo-item">
+                      <img src="assets/IEEEKSpng.png">
+                  </div>
+                  <div class="logo-item">
+                      <img src="assets/ies.png" alt="Partner Logo 3">
+                  </div>
+                  <div class="logo-item">
+                      <img src="assets/vlsi-logo.webp" alt="Partner Logo 4">
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Footer Links -->
+          <div class="row mt-4">
+              <!-- Social Media -->
+             <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+                  <h5>Follow Us On Social:</h5>
+                  <div class="social-icons">
+                      <a href="https://www.instagram.com/ice2cpt?igsh=MXFlYmUwc2RsczdzNA=="><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.linkedin.com/company/ice2cpt/"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              
+              <!-- Quick Links with Split Layout -->
+              <div class="col-lg-4 col-md-4 mb-4 mb-lg-0 quick-links-section">
+                  <h5>Quick Links</h5>
+                  <div class="links-container">
+                      <div class="links-left">
+                          <ul class="footer-links">
+                              <li><a href="https://ice2cpt.com/">Home</a></li>
+                              <li><a href="organizingcommittee.html">OrganizingCommittee</a></li>
+                              <li><a href="callforpapers.html">Call for Papers</a></li>
+                          </ul>
+                      </div>
+                      <div class="links-right">
+                          <ul class="footer-links">
+                              <li><a href="venue.html">Key Attractions</a></li>
+                              <li><a href="https://www.nitjsr.ac.in">NIT JSR Website</a></li>
+                              <li><a href="registrationdetails.html">Register Now</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Contact Us -->
+              <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+                <!--  <h5>Contact Us</h5>
+                  <ul class="footer-links text-center">
+                      <li><a href="mailto:ice2cpt@gmail.com">ice2cpt@gmail.com</a></li>
+                      <li><a href="mailto:suryaprakash.ee@nitjsr.ac.in">suryaprakash.ee@nitjsr.ac.in</a></li>
+                      <li><a href="mailto:krnishant125@gmail.com">krnishant125@gmail.com</a></li>
+                  </ul> -->
+                  <div class="visitor-counter">
+                      <!-- <a href="http://s01.flagcounter.com/more/q6v"><img src="https://s01.flagcounter.com/count2/q6v/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a> -->
+                      <a href="https://www.flagcounter.me/details/fKF"><img src="https://www.flagcounter.me/fKF/" alt="Flag Counter"></a>
+                  </div>
+  
+              </div>
+          </div>
+          
+          <!-- Copyright -->
+          <div class="row footer-bottom">
+              <div class="col-md-12 text-center">
+                  <p class="mb-0">© ICE2CPT-2025. All rights reserved.</p>
+              </div>
+          </div>
       </div>
-    </div>
-  </section>
-</div>-->
+  </footer> 
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+  <!-- COUNTDOWN FN -->
+  <script>
+    // COUNTDOWN FN
+    
+      const today = new Date();
+      const currentYear = today.getFullYear();
+
+      // Check if Christmas has passed for the current year
+      const TARGET_DATE = new Date("2025-10-29T00:00:00");
+      const EXP_DATE = today <= TARGET_DATE ? TARGET_DATE : new Date("2026-10-29T00:00:00");
+      const SPEED = 150;
 
 
+      /***************** COUNTDOWN ********************/
+      const panelCountdown = document.querySelector("#panel-countdown");
 
-  <!-- Footer-->
-  <footer class="bg-black text-center py-5">
-    <div class="container px-5">
-        <div class="text-white-50 large">
-            <div class="mb-2">&copy; ICE2CPT-2025. All Rights Reserved.</div>
-            <span class="mx-2">&middot;</span>
-            <a href="./about.html">About Us</a>
-            <span class="mx-2">&middot;</span>
-            <a href="./venue.html">Key Attractions</a>
-            <span class="mx-2">&middot;</span>
-            <a href="https://nitjsr.ac.in/" target="_blank" rel="noreferrer nofollow">NITJSR Website</a>
-            <hr>
-            <div class="mb-2">Developed by Electrical Engineering, NIT Jamshedpur</div>
-        </div>
-    </div>
-</footer>
+      // Select elements and spans dynamically
+      const countdownElements = ["months", "days", "hours", "minutes", "seconds"];
+      const elements = {};
+      const currentValues = {};
 
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script style="">
-    function updateCountdown() {
-      const targetDate = new Date("October 29, 2025 09:00:00").getTime();
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-      if (difference < 0) {
-        document.getElementById("countdown-timer").innerHTML = "The date has passed!";
-        return;
+      countdownElements.forEach((id) => {
+        elements[id] = document.querySelectorAll(`#${id} span`);
+        currentValues[id] = [];
+      });
+
+      function getCurrentDate() {
+        const currentDate = new Date();
+        const timeDifference = EXP_DATE - currentDate;
+
+        return {
+          months: Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44)),
+          days: Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((timeDifference % (1000 * 60)) / 1000),
+        };
       }
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-      document.getElementById("countdown-timer").innerHTML = ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds;
-    }
-    setInterval(updateCountdown, 1000);
+
+      function updateCountdown() {
+        const currentDate = getCurrentDate();
+
+        countdownElements.forEach((unit, index) => {
+          const paddedValue = padTo2(currentDate[unit]);
+
+          paddedValue.split("").forEach((digit, i) => {
+            if (digit !== currentValues[unit][i]) {
+              changeNum(elements[unit][i], digit, SPEED * (countdownElements.length - index));
+            }
+          });
+
+          currentValues[unit] = paddedValue.split("");
+        });
+      }
+
+      function initialLoad() {
+        const currentDate = getCurrentDate();
+
+        countdownElements.forEach((unit) => {
+          const paddedValue = padTo2(currentDate[unit]);
+          currentValues[unit] = paddedValue.split("");
+
+          elements[unit][0].innerText = currentValues[unit][0];
+          elements[unit][1].innerText = currentValues[unit][1];
+        });
+      }
+
+      // Initialize the countdown display
+      initialLoad();
+
+      // Interval to update the countdown every second
+      let EXP_DATEInterval;
+
+      function startCountdownInterval() {
+        clearInterval(EXP_DATEInterval);
+        EXP_DATEInterval = setInterval(updateCountdown, 1000);
+      }
+      startCountdownInterval();
+
+      // change the numbers
+      function changeNum(el, newVal, timing) {
+        el.style.scale = 0;
+        setTimeout(() => {
+          el.innerText = "";
+          el.style.translate = '0 -5rem';
+          setTimeout(() => {
+            el.style.scale = 1;
+            el.innerText = newVal;
+            setTimeout(() => {
+              el.style.translate = '0';
+            }, timing);
+          }, timing);
+        }, timing);
+      }
+
+
+      function padTo2(num) {
+        return num.toString().padStart(2, "0");
+      }
+
   </script>
-  </body>
+
+
+<!-- NAVBAR SHRINK -->
+<script>
+  window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+</script>
+<!-- toggle menu -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu');
+    let menuVisible = false;
+
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menuVisible = !menuVisible;
+      menu.classList.toggle('menu-active', menuVisible);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (menuVisible && !menu.contains(e.target) && !burger.contains(e.target)) {
+        menu.classList.remove('menu-active');
+        menuVisible = false;
+      }
+    });
+  });
+</script>
+
+
+
+</body>
 
 </html>
