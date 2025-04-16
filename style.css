@@ -404,8 +404,8 @@ img {
 /* hero-section */
   
     .nav-mar-top {
-      margin-top: 12rem;
-      background-image: url("");
+      margin-top: 9rem;
+      /* background-image: url(""); */
       background-size: cover;
 
     }
@@ -419,7 +419,7 @@ img {
 
     .hero-sec h1 {
       /* padding: 4vw 4vw 0 4vw; */
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: bolder;
     }
 
@@ -429,13 +429,20 @@ img {
       padding: 0vw 4vw;
     }
 
+    .center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .left-heading {
+      max-width: 85%;
       background-color: rgba(0, 0, 0, 0.3); /* dark background with transparency */
       /* padding: 1rem 2rem; */
       color: #f0f0f0;
       font-weight: bolder;
       border-radius: 0.5rem; /* optional: soft corners */
-      
+      text-align: center;
     }
 
     .dates {
@@ -604,7 +611,7 @@ img {
       font-weight: 500;
     }
     .paragraph{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 400;
     }
     .about-flex-box {
@@ -617,8 +624,8 @@ img {
     }
 
     .about-flex-box img {
-      height: 31rem;
-      width: 350rem;
+      height: 17rem;
+      width: 250rem;
       object-fit: cover;
     }
 
@@ -631,8 +638,13 @@ img {
     }
 
     .swagatam{
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      
+    }
+    .swagat{
+      width: 60rem;
     }
 
 /* COUNTDOWN */
@@ -702,7 +714,8 @@ h1 {
 
   background-color: rgba(5 46 22 / .75);
   color: white;
-  padding: 1rem 1rem 3rem;
+  padding: 0.5rem 1rem 1rem;
+  padding-bottom: 30px;
   border-radius: 0.5rem;
   position: relative;
   display: grid;
@@ -953,11 +966,13 @@ h1 {
   }
   
   .bg-video {
+    max-width: 100vw;
+    overflow-x: hidden;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     z-index: -1; /* Keeps it behind your content */
     opacity: 0.7; /* Optional: dim it a bit for readability */
