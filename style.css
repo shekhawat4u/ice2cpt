@@ -750,7 +750,7 @@ h1 {
 }
 
 
-    /* FOOTER */
+    /* NEW FOOTER */
     .footerBody {
       font-family: 'Poppins', Arial, sans-serif;
       /* min-height: 50vh; */
@@ -963,6 +963,8 @@ h1 {
           flex-direction: column;
       }
   }
+
+  
 
   .hero-section {
     position: relative !important;
