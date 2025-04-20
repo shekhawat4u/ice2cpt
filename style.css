@@ -91,6 +91,25 @@
   }
 }
 
+/* call for paper */
+.downloadPaper {
+  background: #535353;
+  color: white;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.downloadPaper p {
+  margin: 0;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+
+
 /* ADVISORY COMMITTEE PAGE*/
 a,
 a:hover,

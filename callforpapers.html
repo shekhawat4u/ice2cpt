@@ -383,6 +383,33 @@
   }
     </style>
 
+    <!-- download btn style -->
+    <style>
+      .download-btn {
+        background: #e63946; /* replace with actual value of $almo-red */
+        color: #fff; /* replace with actual value of $white */
+        padding: 10px 20px;
+        padding-left: 1rem;
+        /* margin-left: 20px; */
+      }
+    
+      .download-btn i {
+        font-size: 14px;
+      }
+    
+      .download-btn span {
+        padding-left: 10px;
+      }
+    
+      .download-btn:hover {
+        background: #d62839; /* replace with actual $almo-red-hover */
+      }
+    
+      .download-btn:active {
+        background: #c2182e; /* replace with actual $almo-red-pressed */
+      }
+    </style>
+    
 
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -489,39 +516,81 @@
     <div class="styleheading mb-6">
       <span class="nitish">Call for Papers</span>
     </div>
-    
-    <p class="mb-4 textAB text-2xl">The conference invites high-quality research contributions in all areas of
-      Electrical, Electronics, and Computer Science. Topics of interest include, but are not limited to:</p>
-    <ul class="list-disc pl-5 space-y-2 textAB">
+  
+    <!-- NEW 2-COLUMN LAYOUT -->
+    <div class="flex flex-wrap mb-6">
+      <!-- Left: Full Content -->
+      <div class="w-full md:w-1/2 p-2">
+        <div>
+          <p style="font-size: 2rem; color: #0d3e77; font-weight: 600; padding-bottom: 1rem;">Paper Submission</p>
+          <ul class="list-disc pl-5 space-y-2 textAB" style="font-size: 1rem;">
+            <li>All submissions must be written in English. All papers must be original unpublished work.
+            </li>
+            <li>All papers must be submitted electronically in PDF format by the deadline.
+            </li>
+            <li>The maximum length for full papers is 6 pages, including all text, tables, figures, and references. All authors are encouraged to use as much of the allowed space to effectively explain their work.
+            </li>
+            <li>The conference proceedings will be submitted to the <a style="color: blue;" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore Digital Library®</a>.
+            </li>
+            <li>Standard manuscript templates for conference proceedings in LaTex and Word are present at <a style="color: blue;" href="https://www.ieee.org/conferences/publishing/templates.html">Standard IEEE Templates</a>.</li>
+          </ul>
+        </div>
 
-      <li>Track 1: Power Electronics, Smart Grids, and Renewable Energy Systems.</li>
-      <li>Track 2: Electric Vehicles, Energy Storage, and Transportation Electrification.</li>
-      <li>Track 3: VLSI, IoT, Embedded Systems, and Communication Technologies.</li>
-      <li>Track 4: Signal Processing, AI, and Computational Imaging.</li>
-      <li>Track 5: Machine Learning, Autonomous Systems, and Robotics.</li>
-      <li>Track 6: Cybersecurity, Blockchain, and Emerging Computing Technologies.</li>
-      <li>Track 7: Sustainable and Intelligent Energy Systems for Future Cities.</li>
+        <p class="mb-4 textAB" style="padding-top: 2rem; font-size: 1rem;">
+          The conference invites high-quality research contributions in all areas of Electrical, Electronics, and Computer Science. Topics of interest include, but are not limited to:
+        </p>
+        
+        <ul class="list-disc pl-5 space-y-2 textAB" style="font-size: 1rem;">
+          <li>Track 1: Power Electronics, Smart Grids, and Renewable Energy Systems.</li>
+          <li>Track 2: Electric Vehicles, Energy Storage, and Transportation Electrification.</li>
+          <li>Track 3: VLSI, IoT, Embedded Systems, and Communication Technologies.</li>
+          <li>Track 4: Signal Processing, AI, and Computational Imaging.</li>
+          <li>Track 5: Machine Learning, Autonomous Systems, and Robotics.</li>
+          <li>Track 6: Cybersecurity, Blockchain, and Emerging Computing Technologies.</li>
+          <li>Track 7: Sustainable and Intelligent Energy Systems for Future Cities.</li>
+        </ul>
+  
+        <p class="mt-4 textAB" style="font-size: 1rem;">
+          <strong>Submit your paper by <strong>30th June 2025</strong></strong>.
+        </p>
 
-    </ul>
-    <p class="mt-4 text-2xl textAB"> <strong>Submit your paper by 30th June 2025</strong>.</p>
-    
-    <div class="button-body mt-5 mb-4">
-      
-      <a style="text-decoration: none;" href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICE2CPT2025" target="_blank">
-        <button class="available-for-btn">
-          <div class="circle">
-            <div class="dot"></div>
-            <div class="outline"></div>
-          </div>
-          Click here to Submit your Paper
-        </button>
+        <div style="margin-top: 1rem;">
+          <p style="font-size: 2rem; color: #0d3e77; font-weight: 600; padding-bottom: 1rem;">Special Sessions</p>
+          <p style="font-size: 1rem;">The conference will include special sessions on highly specialized topic areas, reporting technical trends and breakthroughs within the scope of the conference. Special Sessions are organized at the initiative of one or more individuals, who must adhere to specific procedures published <a style="color: blue;" href="SS.html">here</a>.</p>
+        </div>
+  
+        <div class="button-body mt-5 mb-4">
+          <a style="text-decoration: none;" href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICE2CPT2025" target="_blank">
+            <button class="available-for-btn">
+              <div class="circle">
+                <div class="dot"></div>
+                <div class="outline"></div>
+              </div>
+              Submit Paper
+            </button>
+          </a>
+        </div>
+      </div>
+      <!-- RIght: Image -->
+      <div class="w-full md:w-1/2">
 
-      </a>
+        <div class="downloadPaper">
+          <p>
+            Download Call for Papers
+          </p>
+          <a href="https://drive.google.com/file/d/1ciqM27Du6nIIKrcfWSUo4BS-jBiw20sz/view?usp=sharing" target="_blank"><button style="margin-right: 1rem;" class="download-btn btn">
+            <i class="fa fa-download"></i>
+            <span>Download PDF</span>
+          </button></a>
+
+        </div>
+
+        <img style="margin-top: 2rem;" src="assets/COPImg.jpg" alt="Conference Image" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+
     </div>
   </main>
-
-
-
+  
 
 
 
