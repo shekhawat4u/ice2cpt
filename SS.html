@@ -49,8 +49,8 @@
       margin-bottom: 20px;
     }
     .section-wrapper {
-      font-size: 1.1rem;
-      margin-top: 14rem !important; 
+      font-size: 1rem;
+      margin-top: 6rem !important; 
   max-width: 100%;  /* Matches content width */
   margin: 0 auto;
   padding: 0 8rem;
@@ -107,6 +107,7 @@
     .column p {
       margin-bottom: 15px;
       line-height: 1.6;
+      font-size: 1rem;
     }
     .highlight {
   font-weight: bold;
@@ -205,7 +206,65 @@
       }
     }
     </style>
+
+    <!-- new -->
+    <style>
+      @media (max-width: 768px) {
+        .section-wrapper {
+          padding: 0 1rem;
+          margin-top: 10rem !important;
+        }
     
+        .cards {
+          flex-direction: column;
+          gap: 1.5rem;
+          align-items: center;
+        }
+    
+        .card {
+          max-width: 100%;
+          padding: 20px;
+        }
+    
+        .card h2 {
+          font-size: 18px;
+        }
+    
+        .card p, .card a {
+          font-size: 14px;
+        }
+    
+        .template-button {
+          width: 90%;
+          font-size: 15px;
+        }
+    
+        .column {
+          min-width: 100%;
+        }
+    
+        .column p {
+          font-size: 15px;
+        }
+    
+        .navbar .logo.left-logo img,
+        .navbar .logo.right-logo img {
+          width: 5rem;
+        }
+    
+        .menu a {
+          font-size: 1rem;
+        }
+    
+        .footer-links a {
+          font-size: 14px;
+        }
+    
+        .sponsors img {
+          height: 2rem;
+        }
+      }
+    </style>    
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
