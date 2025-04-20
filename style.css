@@ -11,7 +11,7 @@
 
 .styleheading {
   font-family: "Luckiest Guy", cursive !important;
-  padding-top: 5px;
+  padding-top: 4rem;
   font-size: 60px;
   font-weight: 900;
   display: flex;
@@ -984,8 +984,38 @@ h1 {
     opacity: 0.7; /* Optional: dim it a bit for readability */
   }
 
-
-
+  .marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(to right, #d0f0ff, #3BACEF);
+    padding: 10px;
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 30s linear infinite;
+    font-size: 1.2rem; /* or your desired size */
+  }
+  .marquee-wrapper:hover .marquee-text {
+    animation-play-state: paused;
+  }
+  .toAddSpace{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 
 
   /* RAHUL'S CSS */
