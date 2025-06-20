@@ -70,8 +70,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 17rem;
+      width: 103%;
+      height: 13rem;
       transform: scaleX(-1);
       transform: rotate(180deg);
       pointer-events: none;
@@ -108,13 +108,13 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding: 20px 5%;
+      padding: 10px 5%;
       flex-wrap: wrap;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .navbar.shrink {
-      padding: 10px 5%;
+      padding: 5px 5%;
     }
 
     .logo {
@@ -124,16 +124,18 @@
 
     .left-logo img {
       height: auto;
-      width: 10rem;
+      width: 7rem;
     }
 
     .right-logo img {
-      height: 10rem;
+      height: 7rem;
+      padding-top: 12px;
+      margin-left: 37px;
       width: auto;
     }
 
     .navbar.shrink .logo {
-      transform: scale(0.8);
+      transform: scale(0.9);
     }
 
     /* .logo img {
@@ -165,7 +167,7 @@
     }
 
     .sponsors img {
-      height: 3.5rem;
+      height: 3rem;
       object-fit: contain;
       transition: transform 0.3s ease;
     }
@@ -190,11 +192,11 @@
     }
 
     .menu a {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       text-decoration: none;
       color: #333;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 5px 16px;
       border-radius: 5px;
       transition: background-color 0.5s, transform 0.5s ease;
       display: inline-block;
@@ -233,8 +235,8 @@
 
     .dropdown-content a {
       display: block;
-      padding: 10px 20px;
-      font-size: 1.3rem;
+      padding: 5px 10px;
+      font-size: 1.2rem;
       color: #333;
       white-space: nowrap;
       transition: background 0.3s;
@@ -378,6 +380,75 @@
    }
 }
   </style>
+
+  <style>
+        .content {
+            /* padding: 1.5rem 2rem; */
+            /* background-color: white;
+            max-width: 960px; */
+            font-size: large;
+            /* margin: 0 auto; */
+        }
+
+        .step {
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            color: #e53935;
+            font-weight: bold;
+        }
+
+        .step p {
+            line-height: 1.6;
+        }
+
+        .step a {
+            color: green;
+        }
+        .screenshot {
+            width: 100%;
+            height: 280px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Responsive code */
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+        .conference-title {
+            margin-left: 2em;
+            margin-right: 2em;
+            font-size: 1.4rem;
+        }
+
+        .conference-subtitle {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          .content {
+            padding: 1rem 1rem;
+        }
+
+        .screenshot {
+            height: 100%;
+        }
+
+        .screenshot img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        }
+
+  </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -385,7 +456,7 @@
 
    <!-- nav  -->
 
-   <nav class="navbar">
+<nav class="navbar">
     <div class="navbar-wave">
       <!-- Layer 1: Darker Base Wave -->
       <svg class="wave wave1" viewBox="0 0 400 100" preserveAspectRatio="none">
@@ -436,7 +507,6 @@
         <img src="assets/ieeen.png" alt="Sponsor 2" />
         <img src="assets/IEEEKSpng.png" alt="Sponsor 3" />
         <img src="assets/ies.png" alt="Sponsor 4" />
-        <img src="assets/vlsi-logo.webp" alt="Sponsor 5" />
       </div>
 
       <ul class="menu">
@@ -474,19 +544,18 @@
      <i class="fa-solid fa-bars fa-xl"></i>
     </div>
     <div class="logo right-logo">
-      <img class="rightlogo" src="assets/NIT-jamshedpur-logo-113X160.png" alt="Right Logo" />
+      <a href="https://nitjsr.ac.in/" target="_blank"><img class="rightlogo" src="assets/NITB&WLogo.png" alt="Right Logo" /></a>
     </div>
 
   </nav>
 
 
 
-
-  <main class="container mx-auto p-12">
-    <div class="styleheading mt-40">
+  <main class="container mx-auto">
+    <div class="styleheading mt-20">
       <span class="nitish">Manuscript Submission</span>
     </div>
-    </div>
+    
     <div class="textAB">
       <p style="font-weight: normal; color:black; text-align:justify">
         Prospective authors are invited to electronically submit regular papers of their work in English. Submit the
@@ -505,7 +574,7 @@
     </div>
 
     <h1 class="large mb-4 mt-10">Final Paper Submission Instructions</h1>
-    <div class="textAB">
+    <!-- <div class="textAB">
       <p style="font-weight: normal; color:black; text-align:justify">
         Before you can register your paper you should register to the new conference management system. If you haven't
         registered yet, please register at:
@@ -533,10 +602,153 @@
 
       <p>3. Continue to enter information as prompted. An Online confirmation will be displayed and an email
         confirmation will be sent verifying your account setup.</p>
+    </div> -->
+    <div>
+      <div class="content">
+        <div class="step">
+          <h3>Step-1:</h3>
+          <p>
+            The authors will have to submit a camera-ready version as per the guidelines given on the conference website on
+            or before 30th June 2025. Please make sure that plagiarism of your manuscript must be less than 30%, using
+            standard plagiarism checking software (e.g Turnitin), before submitting the camera-ready paper from your end to
+            confirm the inclusion of the paper in IEEE Xplore. If Plagiarism will be more than 30%, then your paper will not
+            be forwarded for the publication in IEEE Xplore.
+          </p>
+          <p>
+            The authors are urged to ensure that the camera-ready submission strictly follows the IEEE Template given on the
+            conference website: <br>
+            <a href="https://www.ieee.org/conferences/publishing/templates.html"
+              target="_blank">https://www.ieee.org/conferences/publishing/templates.html</a>
+          </p>
+          <p>
+            The number of pages in the Final Camera-Ready Paper must be within six pages. The camera-ready papers that do
+            not meet these requirements will not be submitted for further consideration to IEEE Xplore.
+          </p>
+        </div>
+    
+        <!-- Placeholder image area -->
+        <div class="screenshot">
+          <img width="100%" height="100%" src="./assets/Picture1.jpg" alt="Image not Found">
+        </div>
+      </div>
+    
+      <div class="content">
+        <div class="step">
+          <h3>Step-2:</h3>
+          <p>
+            At least one author must register with a Full Author Registration and present the selected paper at ICE2CPT 2025
+            for the paper to be considered for inclusion in the IEEE Xplore Digital Library. Each registration is valid for
+            only ONE (01) participant to attend the conference (a certificate will be issued to that participant only).
+            Co-author(s) who also wish to attend the conference and receive a certificate must register separately under the
+            appropriate registration category.
+          </p>
+          <p>
+            The final manuscript should have the copyright clearance code notice at the bottom of the first page. Kindly
+            refer to the latex/word template provided here:
+            <a href="https://www.ieee.org/conferences/publishing/templates.html"
+              target="_blank">https://www.ieee.org/conferences/publishing/templates.html</a> and replace the dummy code at
+            the first page bottom with this code:
+          </p>
+          <p>
+          <ul>
+            <li>For papers in which all authors are employed by the US government, the copyright notice is: U.S. Government
+              work not protected by U.S. copyright </li><br>
+            <li>For papers in which all authors are employed by a Crown government (UK, Canada, and Australia), the
+              copyright notice is: 979-8-3315-1499-0/25/$31.00 ©2025 Crown</li><br>
+            <li>For papers in which all authors are employed by the European Union, the copyright notice is:
+              979-8-3315-1499-0/25/$31.00 ©2025 European Union</li><br>
+            <li>For all other papers the copyright notice is: 979-8-3315-1499-0/25/$31.00 ©2025 IEEE</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    
+      <div class="content">
+        <div class="step">
+          <h3>Step-3:</h3>
+          <p>
+            IEEE Copyright Form also need to be signed and uploaded in the corresponding section. It can be seen upon login
+            to your CMT account against the paper accepted.
+          </p>
+        </div>
+      </div>
+    
+      <div class="content">
+        <div class="step">
+          <h3>Step-4:</h3>
+          <p>
+            Follow the steps below for Preparing Camera Ready submission through IEEE pdf-express:
+          </p>
+          <p>
+          <h3 style="font-weight: bold; color: black;">Before Creating a PDF:</h3>
+    <ul>
+        <li>Add the copyright notice to the bottom of the first page of your source document.</li>
+        <li>Proofread your source document thoroughly to confirm that it will require no revision.</li>
+    </ul>
+
+    <h3 style="font-weight: bold; color: black;">Creating your PDF <span style="color: red;">e<span style="text-transform: uppercase;">X</span>press™</span> Account:</h3>
+    <ol>
+        <li><strong>1. </strong>Log in to the IEEE PDF <span style="color: red;">e<span style="text-transform: uppercase;">X</span>press™</span> site</li>
+        <li><strong>2. </strong> First-time users should do the following:
+            <ol type="1">
+                <li style="padding-left: 1rem;"><strong>1. </strong> Select the <span style="font-style: italic;">New Users - <a href="#" style="color: green; text-decoration: underline;">Click Here</a></span> link.</li>
+                <li style="padding-left: 1rem;"><strong>2. </strong> Enter the following:
+                    <ul style="list-style-type: square; padding-left: 2.5rem;">
+                        <li>66440X for the Conference ID</li>
+                        <li>your email address</li>
+                        <li>a password</li>
+                    </ul>
+                </li>
+                <li><strong>3. </strong> Continue to enter information as prompted.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <p>An Online confirmation will be displayed, and an email confirmation will be sent verifying your account setup.</p>
+
+    <p>Previous users of PDF <span style="color: red;">e<span style="text-transform: uppercase;">X</span>press</span> need to follow the above steps but should enter the same password that was used for previous conferences. Verify that your contact information is valid.</p>
+        </div>
+      </div>
+    
+      <div class="content">
+        <div class="step">
+          <h3>Step-5:</h3>
+          <p>
+            Procedure for IEEE Copyright Form eCF submission:
+          </p>
+          <p>
+            To enable your paper to appear in IEEE eXplorer, it is mandatory to transfer the Copyright to IEEE. The
+            corresponding/submitting author of each paper must transfer IEEE eCF. The steps to transfer the Copyright to
+            IEEE are also given below:
+          </p>
+          <p>
+          <ol style="padding-left: 2rem;">
+            <li><strong>1.</strong> Login to your CMT Paper Submission Portal and Click on the IEEE copyright link. You will be redirected to
+              IEEE Copyright Form Submission page.</li>
+            <li><strong>2.</strong> Click on “Click here to redirect to the IEEE copyright website” to transfer eCF and you will be redirected
+              to IEEE copyright portal.</li>
+            <li><strong>3.</strong> Follow the steps (Step 1 to Step 5) and provided instructions to complete the IEEE Copyright Transfer
+              process.</li>
+            <li><strong>4.</strong> At the end of Step 5, download the completed Copyright Form and save it as .pdf (Make sure to download a
+              copy of the completed form.)</li>
+            <li><strong>5.</strong> Login to your CMT Paper Submission Portal and upload this pdf file of Copyright Transfer Form</li>
+          </ol>
+          </p>
+          <p>
+            It completes the Copyright Transfer of your paper to IEEE. Please note that separate copyright transfer is
+            required for each paper.
+          </p>
+        </div>
+    
+        <div class="screenshot2">
+          <img style="height: 100%;" src="./assets/Picture2.png" alt="Image not Found">
+        </div>
+      </div>
+    
     </div>
 
     </div>
-    <h2 class="large mb-2 mt-8">Further</h2>
+    <h2 class="large mb-2">Further</h2>
     <div class="textAB">
       <ol class="list-decimal pl-5 space-y-2">
         <li>Prepare your manuscript according to the guidelines provided.</li>
