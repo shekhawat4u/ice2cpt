@@ -494,18 +494,42 @@
   </nav>
 
 
+  <button id="pageUpBtn" class="page-up-btn fixed bottom-8 right-8 bg-gradient-to-r from-sky-500 to-cyan-300 px-3 py-2 rounded-lg shadow-lg z-50 text-white font-sans transition-transform duration-200 hover:scale-110 flex items-center gap-2 hidden">
+    <i class="fas fa-arrow-up"></i>
+    Back to top
+  </button>
+  <script>
+    // Show/hide "Back to top" button on scroll
+    window.addEventListener('scroll', function () {
+      const btn = document.getElementById('pageUpBtn');
+      if (window.scrollY > 100) {
+        btn.classList.remove('hidden');
+      } else {
+        btn.classList.add('hidden');
+      }
+    });
+    // Scroll to top on click
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('pageUpBtn').onclick = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    });
+  </script>
   <!-- Main Content -->
-  <section class="speakers-section-three">
+  <section class="speakers-section-three flex flex-col gap-2">
+    <!-- international advisory commette -->
     <div class="container">
       <div class="sec-title text-center">
         <div class="styleheading" style="padding-top: 0rem;">
+          <span class="nitish">International</span>
           <span class="nitish">Advisory</span>
           <span class="pjt">Committee</span>
         </div>
-        <p>Meet the distinguished members of our International and National Advisory Committee who play a key role in
+        <p>Meet the distinguished members of our International Advisory Committee who play a key role in
           shaping the content and structure of the conference.</p>
       </div>
-      <div class="row"><!-- Speaker Block 1-->
+      <div class="row">
+        <!-- Speaker 1: Prof. Andy Chen -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
@@ -513,37 +537,39 @@
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://ieeesystemscouncil.org/contact/andy-chen">Prof. Andy Chen</a></h4><span
-                class="designation">IEEE Systems Council 2025 President</span>
+          class="designation">IEEE Systems Council 2025 President</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li><a href="https://ieeesystemscouncil.org/contact/andy-chen"></a></li>
+          <li><a href="https://ieeesystemscouncil.org/contact/andy-chen"></a></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 2-->
+        </div>
+        <!-- Speaker 2: Prof. Hironori Washizaki -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.computer.org/profiles/hironori-washizaki"><img
-                    src="images/Hironori.png" alt=""></a></figure>
+              src="images/Hironori.png" alt=""></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.computer.org/profiles/hironori-washizaki">Prof. Hironori
-                  Washizaki</a></h4><span class="designation">IEEE Computer Society 2025 President</span>
+            Washizaki</a></h4><span class="designation">IEEE Computer Society 2025 President</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 3-->
+        </div>
+        <!-- Speaker 3: Walter D. Downing -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://ieeesystemscouncil.org/contact/walter-downing"><img
-                    src="images/Walt.png" alt=""></a></figure>
+              src="images/Walt.png" alt=""></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://ieeesystemscouncil.org/contact/walter-downing">Walter D. Downing</a>
@@ -551,313 +577,17 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 4-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="http://qufaculty.qu.edu.qa/atif-iqbal/#sidebar"><img src="images/Atif.png"
-                    alt=""></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="http://qufaculty.qu.edu.qa/atif-iqbal/#sidebar">Prof. Atif Iqbal,
-                  Fellow IEEE</a></h4><span class="designation">Qatar University, Doha, Qatar</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 5-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://mtt.org/profile/goutam-chattopadhyay/"><img src="images/GC.png"
-                    alt=""></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://mtt.org/profile/goutam-chattopadhyay/">Dr. Goutam Chattopadhyay</a></h4>
-              <span class="designation">Senior Scientist, NASA-JPL, President, IEEE MTT-S</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 6-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://www.usj.edu.lb/enseignants/?empid=595&lang=2"><img
-                    src="images/Hadi.png" alt=""></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://www.usj.edu.lb/enseignants/?empid=595&lang=2">Prof. Hadi Y. Kanaan</a>
-              </h4><span class="designation">Saint Joseph University of Beirut</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 7-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://sites.google.com/iitj.ac.in/mkumar/home"><img
-                    src="images/mahesh.jpg" alt=""></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://sites.google.com/iitj.ac.in/mkumar/home">Prof. Mahesh Kumar</a></h4>
-              <span class="designation">Indian Institute of Technology, Jodhpur, India</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 8-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://vbn.aau.dk/en/persons/fbl"><img src="images/Frede.jpg" alt=""></a>
-              </figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://vbn.aau.dk/en/persons/fbl">Prof. Frede Blaabjerg</a></h4><span
-                class="designation">AAU Energy, Aalborg University, Denmark</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div> <!--Speaker Block 9-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://electrical.sdsu.edu/people/satish-sharma"><img
-                    src="images/Satish.png" alt="Prof. Satish Sharma"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://electrical.sdsu.edu/people/satish-sharma">Prof. Satish Sharma</a></h4>
-              <span class="designation">San Diego State University, California, United States</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 10-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a
-                  href="https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas"><img
-                    src="images/SN.png" alt="Prof. Sri Niwas Singh"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a
-                  href="https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas">Prof. Sri Niwas
-                  Singh</a></h4>
-              <span class="designation">Director, ABV-IIITM, Gwalior, India</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- Speaker Block 11-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://ieeemagnetics.org/contact/shashikant-patil"><img
-                    src="images/IMG_7959.jpg" alt="Dr. Shashikant Patil"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://ieeemagnetics.org/contact/shashikant-patil">Dr. Shashikant Patil</a>
-              </h4>
-              <span class="designation">Advisor Liaison IEEE Bombay Section India</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 12-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://vbn.aau.dk/en/persons/joz"><img src="images/JMC.png"
-                    alt="Prof. Josep M. Guerrero"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://vbn.aau.dk/en/persons/joz">Prof. Josep M. Guerrero</a></h4>
-              <span class="designation">Huanjiang Laboratory, Zhejiang University, China</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 13-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://biz.nevsehir.edu.tr/kabalci#sidebar"><img src="images/EK.png"
-                    alt="Prof. Ersan Kabalcı"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://biz.nevsehir.edu.tr/kabalci#sidebar">Prof. Ersan Kabalcı</a></h4>
-              <span class="designation">Nevsehir Haci Bektas Veli University, Nevsehir-Turkey</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 14-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://sp4te.uniroma3.it/benedetto/"><img src="images/FB.png"
-                    alt="Prof. Francesco Benedetto"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://sp4te.uniroma3.it/benedetto/">Prof. Francesco Benedetto</a></h4>
-              <span class="designation">University of ROMA TRE, Italy</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 15-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://scholars.uow.edu.au/kashem-muttaqi"><img src="images/KM.png"
-                    alt="Prof. Kashem Muttaqi"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://scholars.uow.edu.au/kashem-muttaqi">Prof. Kashem Muttaqi</a></h4>
-              <span class="designation">University of Wollongong, Australia</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 16-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://profiles.imperial.ac.uk/b.pal"><img src="images/BP.png"
-                    alt="Prof. Bikash Pal"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://profiles.imperial.ac.uk/b.pal">Prof. Bikash Pal</a></h4>
-              <span class="designation">Imperial College London, London</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- Speaker Block 17-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://people.iiti.ac.in/~pachori/"><img src="images/RBP.png"
-                    alt="Prof.(HAG) Ram Bilas Pachori"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://people.iiti.ac.in/~pachori/">Prof.(HAG) Ram Bilas Pachori</a></h4>
-              <span class="designation">Indian Institute of Technology (IIT) Indore, India</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 18-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="http://schakravorti.info/index.html"><img src="images/SC.png"
-                    alt="Prof. Sivaji Chakravorti"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="http://schakravorti.info/index.html">Prof. Sivaji Chakravorti</a></h4>
-              <span class="designation">INAE President, Jadavpur University, Kolkata</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 19-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://sites.google.com/site/energydevlab/members/professor"><img
-                    src="images/DWK.png" alt="Prof. Dong-Won Kang"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://sites.google.com/site/energydevlab/members/professor">Prof. Dong-Won
-                  Kang</a></h4>
-              <span class="designation">Chung-Ang University, Rep. of Korea</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 20-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a
-                  href="https://nitc.ac.in/multidiscilplinary-centres/centre-for-qa-and-enhancement/faculty-and-staff/faculty/998d69df-0017-4440-8a6e-ebd6dbbf1ef7"><img
-                    src="images/SMS.png" alt="Prof. S. M. Sameer"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a
-                  href="https://nitc.ac.in/multidiscilplinary-centres/centre-for-qa-and-enhancement/faculty-and-staff/faculty/998d69df-0017-4440-8a6e-ebd6dbbf1ef7">Prof.
-                  S. M. Sameer</a></h4>
-              <span class="designation">National Institute of Technology Calicut, India</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- Speaker Block 21-->
+        </div>
+        <!-- Speaker 4: Prof. Jyotika Athavale -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.computer.org/profiles/jyotika-athavale"><img
-                    src="images/JA.png" alt="Prof. Jyotika Athavale"></a></figure>
+              src="images/JA.png" alt="Prof. Jyotika Athavale"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.computer.org/profiles/jyotika-athavale">Prof. Jyotika Athavale</a>
@@ -866,21 +596,223 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 22-->
-        <!-- Speaker Block 23-->
+        </div>
+        <!-- Speaker 5: Prof. Anurag K Srivastava -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
-              <figure class="image"><a href="https://www.kramakrishna.com/"><img src="images/RK.png"
-                    alt="Prof. Ramakrishna Kappagantu"></a></figure>
+              <figure class="image"><a href="https://directory.statler.wvu.edu/faculty-staff-directory/anurag-srivastava"><img
+              src="images/AnuragSrivastava-290x290.jpg" alt="Prof. Anurag K Srivastava"></a></figure>
             </div>
             <div class="info-box">
-              <h4 class="name"><a href="https://www.kramakrishna.com/">Prof. Ramakrishna Kappagantu</a></h4>
-              <span class="designation">Secretary, IEEE PES</span>
+              <h4 class="name"><a href="https://directory.statler.wvu.edu/faculty-staff-directory/anurag-srivastava">Prof. Anurag K Srivastava</a>
+              </h4>
+              <span class="designation">West Virginia University, USA</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 6: Prof. Atif Iqbal -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="http://qufaculty.qu.edu.qa/atif-iqbal/#sidebar"><img src="images/Atif.png"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="http://qufaculty.qu.edu.qa/atif-iqbal/#sidebar">Prof. Atif Iqbal,
+            Fellow IEEE</a></h4><span class="designation">Qatar University, Doha, Qatar</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 7: Prof. Montserrat Rivas -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://ieeemagnetics.org/contact/montserrat-rivas"><img src="images/Rivas_headshot.jpeg"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://ieeemagnetics.org/contact/montserrat-rivas">Prof. Montserrat Rivas</a></h4><span class="designation">University of Oviedo, Spain</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 8: Prof. Francisco Gonzalez-Longatt -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.usn.no/english/about/contact-us/employees/francisco-gonzalez-longatt"><img src="images/Photo_FGL_Sep2011_Con_Fondo(1).jpg (article_small).webp"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.usn.no/english/about/contact-us/employees/francisco-gonzalez-longatt">Prof. Francisco Gonzalez-Longatt</a></h4><span class="designation">University of South-Eastern Norway, Norway</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 9: Prof. Kashem Muttaqi -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://scholars.uow.edu.au/kashem-muttaqi"><img src="images/KM.png"
+              alt="Prof. Kashem Muttaqi"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://scholars.uow.edu.au/kashem-muttaqi">Prof. Kashem Muttaqi</a></h4>
+              <span class="designation">University of Wollongong, Australia</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 10: Prof. Bikash Pal -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://profiles.imperial.ac.uk/b.pal"><img src="images/BP.png"
+              alt="Prof. Bikash Pal"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://profiles.imperial.ac.uk/b.pal">Prof. Bikash Pal</a></h4>
+              <span class="designation">Imperial College London, London</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 11: Dr. Goutam Chattopadhyay -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://mtt.org/profile/goutam-chattopadhyay/"><img src="images/GC.png"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://mtt.org/profile/goutam-chattopadhyay/">Dr. Goutam Chattopadhyay</a></h4>
+              <span class="designation">Senior Scientist, NASA-JPL, President, IEEE MTT-S</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 12: Prof. Josep M. Guerrero -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://vbn.aau.dk/en/persons/joz"><img src="images/JMC.png"
+              alt="Prof. Josep M. Guerrero"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://vbn.aau.dk/en/persons/joz">Prof. Josep M. Guerrero</a></h4>
+              <span class="designation">Huanjiang Laboratory, Zhejiang University, China</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 13: Prof. Satish Sharma -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://electrical.sdsu.edu/people/satish-sharma"><img
+              src="images/Satish.png" alt="Prof. Satish Sharma"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://electrical.sdsu.edu/people/satish-sharma">Prof. Satish Sharma</a></h4>
+              <span class="designation">San Diego State University, California, United States</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 14: Prof. Innocent Kamwa -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://iid.ulaval.ca/en/members/innoncent-kamwa/"><img
+              src="images/phiinnocent-kamwa-iid-ulaval.webp" alt="Prof. Innocent Kamwa"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://iid.ulaval.ca/en/members/innoncent-kamwa/">Prof. Innocent Kamwa</a></h4>
+              <span class="designation">Université Laval, Varennes, Quebec, Canada</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 15: Prof. Steven Li -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://wne.edu/directory/zhaojun-li.cfm"><img
+              src="images/fdbs_li-zhaojun.jpg" alt="Prof. Steven Li"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://wne.edu/directory/zhaojun-li.cfm">Prof. Steven Li</a></h4>
+              <span class="designation">Western New England University, Massachusetts, USA</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 16: Prof. Celestine Iwendi -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="https://greatermanchester.ac.uk/our-staff/celestine-iwendi">
+                  <img src="images/Celestine-Iwendi-Web-Size-v2.jpg" alt="Prof. Celestine Iwendi">
+                </a>
+              </figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name">
+                <a href="https://greatermanchester.ac.uk/our-staff/celestine-iwendi">Prof. Celestine Iwendi</a>
+              </h4>
+              <span class="designation">University of Bolton, United Kingdom</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
@@ -888,12 +820,193 @@
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 24-->
+        </div>
+        <!-- Speaker 17: Prof. Sheldon Williamson -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://ontariotechu.ca/experts/feas/sheldon-williamson.php"><img
+              src="images/sheldon.williamson.jpg" alt="Prof. Sheldon Williamson"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://ontariotechu.ca/experts/feas/sheldon-williamson.php">Prof. Sheldon Williamson</a></h4>
+              <span class="designation">Ontario Tech University, Canada</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 18: Prof. Toshitaka Tsuda -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://ieeexplore.ieee.org/author/37304957000"><img
+              src="images/tsuda-2772351-small.gif" alt="Prof. Toshitaka Tsuda"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://ieeexplore.ieee.org/author/37304957000">Prof. Toshitaka Tsuda</a></h4>
+              <span class="designation">Ontario Tech University, Canada</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 19: Dr. Manfred Schindler -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.linkedin.com/in/manfred-fred-schindler-95772/"><img
+              src="images/manfred.jpeg" alt="Dr. Manfred Schindler"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.linkedin.com/in/manfred-fred-schindler-95772/">Dr. Manfred Schindler</a></h4>
+              <span class="designation">IEEE VP-TAB</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 20: Prof. Ersan Kabalcı -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://biz.nevsehir.edu.tr/kabalci#sidebar"><img src="images/EK.png"
+              alt="Prof. Ersan Kabalcı"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://biz.nevsehir.edu.tr/kabalci#sidebar">Prof. Ersan Kabalcı</a></h4>
+              <span class="designation">Nevsehir Haci Bektas Veli University, Nevsehir-Turkey</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 21: Prof. Massimo Mitolo -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.linkedin.com/in/massimo-mitolo/"><img src="images/massimo.jpeg"
+              alt="Prof. Massimo Mitolo"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.linkedin.com/in/massimo-mitolo/">Prof. Massimo Mitolo</a></h4>
+              <span class="designation">Irvine Valley College, Irvine, California, USA</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 22: Prof. Erol Gelenbe -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.iitis.pl/en/person/segelenbe"><img src="images/gelenbe.jpg"
+              alt="Prof. Erol Gelenbe"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.iitis.pl/en/person/segelenbe">Prof. Erol Gelenbe</a></h4>
+              <span class="designation">IITIS-PAN, Poland</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 23: Prof. Nikhil Gupta -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://engineering.nyu.edu/faculty/nikhil-gupta"><img src="images/picture-374.jpg"
+              alt="Prof. Nikhil Gupta"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://engineering.nyu.edu/faculty/nikhil-gupta">Prof. Nikhil Gupta</a></h4>
+              <span class="designation">New York University, NewYork</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 24: Prof. Celia Shahnaz -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://eee.buet.ac.bd/people/faculty/dcs"><img src="images/DCS.jpg"
+              alt="Prof. Celia Shahnaz"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://eee.buet.ac.bd/people/faculty/dcs">Prof. Celia Shahnaz</a></h4>
+              <span class="designation">BUET, Bangladesh</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 25: Prof. Eduardo Ahumada-Tello -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://kis.cs.dal.ca/eduardo-ahumada-tello/"><img src="images/Eduardo_Ahumada_Tello-1.jpg"
+              alt="Prof. Eduardo Ahumada-Tello"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://kis.cs.dal.ca/eduardo-ahumada-tello/">Prof. Eduardo Ahumada-Tello</a></h4>
+              <span class="designation">UABC, Mexico</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 26: Prof. Francesco Benedetto -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://sp4te.uniroma3.it/benedetto/"><img src="images/FB.png"
+              alt="Prof. Francesco Benedetto"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://sp4te.uniroma3.it/benedetto/">Prof. Francesco Benedetto</a></h4>
+              <span class="designation">University of ROMA TRE, Italy</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 27: Prof. Gautam Srivastava -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://people.brandonu.ca/srivastavag/">
-                <img src="images/GS.png" alt="Prof. Gautam Srivastava" style="width: auto; height: 160px; object-fit: cover; padding-left: 27px;">
+          <img src="images/GS.png" alt="Prof. Gautam Srivastava" style="width: auto; height: 160px; object-fit: cover; padding-left: 27px;">
               </a></figure>
             </div>
             <div class="info-box">
@@ -902,69 +1015,36 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 25-->
+        </div>
+        <!-- Speaker 28: Prof. Pat Wheeler -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.nottingham.ac.uk/engineering/people/pat.wheeler"><img
-                    src="images/PW.png" alt="Prof. Pat Wheeler"></a></figure>
+              src="images/PW.png" alt="Prof. Pat Wheeler"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.nottingham.ac.uk/engineering/people/pat.wheeler">Prof. Pat
-                  Wheeler</a></h4>
+            Wheeler</a></h4>
               <span class="designation">University of Nottingham, England</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 26-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://scholar.google.de/citations?user=JWwD_ogAAAAJ&hl=de"><img
-                    src="images/didi.jpg" alt="Prof. Abdessamad DIDI"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://scholar.google.de/citations?user=JWwD_ogAAAAJ&hl=de">Prof. Abdessamad
-                  DIDI</a></h4>
-              <span class="designation">Hassan First University, Settat, Morocco</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 27-->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="http://nsut.ac.in/en/node/1214"><img src="images/PG.jpeg"
-                    alt="Prof. Prerna Gaur"></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="http://nsut.ac.in/en/node/1214">Prof. Prerna Gaur</a></h4>
-              <span class="designation">Chair, IEEE India Council</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- Speaker Block 28-->
+        </div>
+        <!-- Speaker 29: Prof. Akhtar Kalam -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.vu.edu.au/research/akhtar-kalam"><img src="images/Kalam.png"
-                    alt="Prof. Akhtar Kalam"></a></figure>
+              alt="Prof. Akhtar Kalam"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.vu.edu.au/research/akhtar-kalam">Prof. Akhtar Kalam</a></h4>
@@ -972,52 +1052,55 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 29-->
+        </div>
+        <!-- Speaker 30: Prof. V. K. Sood -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://engineering.ontariotechu.ca/people/ecse/vijay.sood.php"><img
-                    src="images/VKS.png" alt="Prof. V. K. Sood"></a></figure>
+              src="images/VKS.png" alt="Prof. V. K. Sood"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://engineering.ontariotechu.ca/people/ecse/vijay.sood.php">Prof. V. K.
-                  Sood</a></h4>
+            Sood</a></h4>
               <span class="designation">Ontario Tech University, Oshawa, Canada</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 30-->
+        </div>
+        <!-- Speaker 31: Prof. Surender Reddy Salkuti -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://english.wsu.ac.kr/board/read.jsp?id=232635&code=eng0601"><img
-                    src="images/SRS.png" alt="Prof. Surender Reddy Salkuti"></a></figure>
+              src="images/SRS.png" alt="Prof. Surender Reddy Salkuti"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://english.wsu.ac.kr/board/read.jsp?id=232635&code=eng0601">Prof. Surender
-                  Reddy Salkuti</a></h4>
+            Reddy Salkuti</a></h4>
               <span class="designation">Woosong University</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
-        </div><!-- Speaker Block 31-->
+        </div>
+        <!-- Speaker 32: Prof. Ajit Kumar Verma -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.hvl.no/en/employee/?user=AjitKumar.Verma"><img
-                    src="images/AKV.png" alt="Prof. Ajit Kumar Verma"></a></figure>
+              src="images/AKV.png" alt="Prof. Ajit Kumar Verma"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.hvl.no/en/employee/?user=AjitKumar.Verma">Prof. Ajit Kumar Verma</a>
@@ -1026,16 +1109,485 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- speaker block 32 -->
+        <!-- Speaker 33: Prof. Dong-Won Kang -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
-              <figure class="image"><a href="https://www.iitr.ac.in/manojtripathy/"><img src="images/MT.png" alt=""></a></figure>
+              <figure class="image"><a href="https://sites.google.com/site/energydevlab/members/professor"><img
+              src="images/DWK.png" alt="Prof. Dong-Won Kang"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://sites.google.com/site/energydevlab/members/professor">Prof. Dong-Won
+            Kang</a></h4>
+              <span class="designation">Chung-Ang University, Rep. of Korea</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 34: Dr. Hady Habib Fayek -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://orcid.org/0000-0002-6294-5144"><img
+              src="images/hady.jpeg" alt="Dr. Hady Habib Fayek"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://orcid.org/0000-0002-6294-5144">Dr. Hady Habib Fayek</a></h4>
+              <span class="designation">Egyptian Chinese University, Cairo, Egypt</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 35: Prof. Abdessamad DIDI -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://scholar.google.de/citations?user=JWwD_ogAAAAJ&hl=de"><img
+              src="images/didi.jpg" alt="Prof. Abdessamad DIDI"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://scholar.google.de/citations?user=JWwD_ogAAAAJ&hl=de">Prof. Abdessamad
+            DIDI</a></h4>
+              <span class="designation">Hassan First University, Settat, Morocco</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 36: Dr. Giridhar Reddy Bojja -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/"><img src="images/GRB.png"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/">Dr. Giridhar Reddy Bojja</a></h4>
+              <span class="designation">Michigan Technological University</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Speaker 37: Prof. Yu-Chen Hu -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/"><img src="images/yuchen.jpg"
+              alt="Prof. Yu-Chen Hu"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/">Prof. Yu-Chen Hu</a></h4>
+              <span class="designation">Tunghai University, Taiwan</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <div class="sec-title text-center">
+        <div class="styleheading" style="padding-top: 0rem;">
+          <span class="nitish">National</span>
+          <span class="nitish">Advisory</span>
+          <span class="pjt">Committee</span>
+        </div>
+        <p>Meet the distinguished members of our National Advisory Committee who play a key role in
+          shaping the content and structure of the conference.</p>
+      </div>
+      <div class="row">
+
+        <!-- Speaker 1: Prof. Sivaji Chakravorti -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="http://schakravorti.info/index.html"><img src="images/SC.png"
+              alt="Prof. Sivaji Chakravorti"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="http://schakravorti.info/index.html">Prof. Sivaji Chakravorti</a></h4>
+              <span class="designation">INAE President, Jadavpur University, Kolkata</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 2: Prof. Sri Niwas Singh -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a
+            href="https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas"><img
+              src="images/SN.png" alt="Prof. Sri Niwas Singh"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a
+            href="https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas">Prof. Sri Niwas
+            Singh</a></h4>
+              <span class="designation">Director, ABV-IIITM, Gwalior, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 3: Prof.(HAG) Ram Bilas Pachori -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://people.iiti.ac.in/~pachori/"><img src="images/RBP.png"
+              alt="Prof.(HAG) Ram Bilas Pachori"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://people.iiti.ac.in/~pachori/">Prof.(HAG) Ram Bilas Pachori</a></h4>
+              <span class="designation">Indian Institute of Technology (IIT) Indore, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 4: Prof. Prerna Gaur -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="http://nsut.ac.in/en/node/1214"><img src="images/PG.jpeg"
+              alt="Prof. Prerna Gaur"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="http://nsut.ac.in/en/node/1214">Prof. Prerna Gaur</a></h4>
+              <span class="designation">Chair, IEEE India Council</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 5: Prof. Mahesh Kumar -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://sites.google.com/iitj.ac.in/mkumar/home"><img
+              src="images/mahesh.jpg" alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://sites.google.com/iitj.ac.in/mkumar/home">Prof. Mahesh Kumar</a></h4>
+              <span class="designation">Indian Institute of Technology, Jodhpur, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 6: Prof. S. M. Sameer -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a
+            href="https://nitc.ac.in/multidiscilplinary-centres/centre-for-qa-and-enhancement/faculty-and-staff/faculty/998d69df-0017-4440-8a6e-ebd6dbbf1ef7"><img
+              src="images/SMS.png" alt="Prof. S. M. Sameer"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a
+            href="https://nitc.ac.in/multidiscilplinary-centres/centre-for-qa-and-enhancement/faculty-and-staff/faculty/998d69df-0017-4440-8a6e-ebd6dbbf1ef7">Prof.
+            S. M. Sameer</a></h4>
+              <span class="designation">National Institute of Technology Calicut, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 7: Prof. Ramakrishna Kappagantu -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.kramakrishna.com/"><img src="images/RK.png"
+              alt="Prof. Ramakrishna Kappagantu"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.kramakrishna.com/">Prof. Ramakrishna Kappagantu</a></h4>
+              <span class="designation">Secretary, IEEE PES</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 8: Prof. Shree Prakash Tiwari -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://research.iitj.ac.in/researcher/shree-prakash-tiwari"><img src="images/prakash tiwari.webp"
+              alt="Prof. Shree Prakash Tiwari"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://research.iitj.ac.in/researcher/shree-prakash-tiwari">Prof. Shree Prakash Tiwari</a></h4>
+              <span class="designation">Indian Institute of Technology (IIT) Jodhpur</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 9: Dr. Shashikant Patil -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://ieeemagnetics.org/contact/shashikant-patil"><img
+              src="images/IMG_7959.jpg" alt="Dr. Shashikant Patil"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://ieeemagnetics.org/contact/shashikant-patil">Dr. Shashikant Patil</a>
+              </h4>
+              <span class="designation">Advisor Liaison IEEE Bombay Section India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 10: Prof. Sudeb Dasgupta -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://ece.iitr.ac.in/sudeb-dasgupta"><img
+              src="images/sudeb_08072020051753-768x768.png" alt="Prof. Sudeb Dasgupta"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://ece.iitr.ac.in/sudeb-dasgupta">Prof. Sudeb Dasgupta</a>
+              </h4>
+              <span class="designation">Indian Institute of Technology Roorkee, Roorkee, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored"></ul>
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 11: Prof. Santosh Kumar Singh -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.iitbhu.ac.in/dept/eee/people/sksingheee"><img
+              src="images/eee_facullty_santoshkr.jpg" alt="Prof. Santosh Kumar Singh"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.iitbhu.ac.in/dept/eee/people/sksingheee">Prof. Santosh Kumar Singh</a>
+              </h4>
+              <span class="designation">IIT (BHU), Varanasi, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 12: Prof. Santosh Kumar Vishvakarma -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.skvishvakarma.com"><img
+              src="images/santosh.png" alt="Prof. Santosh Kumar Vishvakarma"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.skvishvakarma.com">Prof. Santosh Kumar Vishvakarma</a>
+              </h4>
+              <span class="designation">IIT Indore, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 13: Prof. R. K. Saket -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://iitbhu.ac.in/dept/eee/people/rksaketeee"><img
+              src="images/rksaket.jpg" alt="Prof. Sudeb Dasgupta"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://iitbhu.ac.in/dept/eee/people/rksaketeee">Prof. R. K. Saket</a>
+              </h4>
+              <span class="designation">IIT (BHU), Varanasi, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 14: Prof. Swades De -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://web.iitd.ac.in/~swadesd/"><img
+              src="images/s_de.jpg" alt="Prof. Swades De"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://web.iitd.ac.in/~swadesd/">Prof. Swades De</a>
+              </h4>
+              <span class="designation">Indian Institute of Technology Delhi (IITD), India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 15: Prof. Sudeendra Koushik -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://40yrs.ieeebangalore.org/dr-sudeendra-kaushik/"><img
+              src="images/SK-High-Res-pic-290x300.jpg.crdownload" alt="Prof. Sudeendra Koushik"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://40yrs.ieeebangalore.org/dr-sudeendra-kaushik/">Prof. Sudeendra Koushik</a>
+              </h4>
+              <span class="designation">President-Elect, IEEE TEMS, 2025</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 16: Prof. Nilanjan Senroy -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://web.iitd.ac.in/~nsenroy/"><img src="images/NS.png"
+              alt="Prof. Nilanjan Senroy"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://web.iitd.ac.in/~nsenroy/">Prof. Nilanjan Senroy</a></h4>
+              <span class="designation">IIT Delhi</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 17: Prof. Deepak Mathur -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://yp.ieeer10.org/deepak-mathur/"><img src="images/deepakmathur.png"
+              alt="Prof. Deepak Mathur"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://yp.ieeer10.org/deepak-mathur/">Prof. Deepak Mathur</a></h4>
+              <span class="designation">IEEE Vice President-Elect, MGA</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 18: Prof. Rajesh Kumar -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.mnit.ac.in/dept_ee/profile?fid=RKiJ"><img src="images/rajesh kumar.png"
+              alt="Prof. Rajesh Kumar"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.mnit.ac.in/dept_ee/profile?fid=RKiJ">Prof. Rajesh Kumar</a></h4>
+              <span class="designation">MNIT, Jaipur</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 19: Prof. Manoj Tripathy -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.iitr.ac.in/manojtripathy/"><img src="images/MT.png" alt="Prof. Manoj Tripathy"></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.iitr.ac.in/manojtripathy/">Prof. Manoj Tripathy</a></h4>
@@ -1044,87 +1596,168 @@
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- !-- speaker block 33 -->
+
+        <!-- Speaker 20: Prof. Ravi Kumar Gangwar -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://people.iitism.ac.in/~ravi/"><img src="images/ravi2.jpg" alt="Prof. Ravi Kumar Gangwar"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://people.iitism.ac.in/~ravi/">Prof. Ravi Kumar Gangwar</a></h4>
+              <span class="designation">IIT (ISM), Dhanbad
+              </span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 21: Dr. Sanjoy Kumar Parida -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
               <figure class="image"><a href="https://www.iitp.ac.in/people-2/ee-faculty/203:view-profile-16"><img src="images/SKP.png"
-                    alt=""></a></figure>
+              alt=""></a></figure>
             </div>
             <div class="info-box">
               <h4 class="name"><a href="https://www.iitp.ac.in/people-2/ee-faculty/203:view-profile-16">Dr. Sanjoy Kumar
-                  Parida</a></h4>
+            Parida</a></h4>
               <span class="designation">IIT Patna</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- 34 -->
-        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-          <div class="inner-box">
-            <div class="image-box">
-              <figure class="image"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/"><img src="images/GRB.png"
-                    alt=""></a></figure>
-            </div>
-            <div class="info-box">
-              <h4 class="name"><a href="https://www.mtu.edu/business/people-groups/faculty/reddy-giridhar/">Dr. Giridhar Reddy Bojja</a></h4>
-              <span class="designation">Michigan Technological University</span>
-            </div>
-            <div class="social-box">
-              <ul class="social-links social-icon-colored">
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- 35 -->
 
-        <!-- 36 -->
+        <!-- Speaker 22: Mr. Sushil Kumar Soonee -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
-              <figure class="image"><a href="https://web.iitd.ac.in/~nsenroy/"><img src="images/NS.png"
-                    alt=""></a></figure>
+              <figure class="image"><a href="https://www.raponline.org/experts/sushil-kumar-soonee/"><img src="images/sushilsoonee.png"
+              alt="Mr. Sushil Kumar Soonee"></a></figure>
             </div>
             <div class="info-box">
-              <h4 class="name"><a href="https://web.iitd.ac.in/~nsenroy/">Prof. Nilanjan Senroy</a></h4>
-              <span class="designation">IIT Delhi</span>
+              <h4 class="name"><a href="https://www.raponline.org/experts/sushil-kumar-soonee/">Mr. Sushil Kumar Soonee
+            </a></h4>
+              <span class="designation">Founder and Former CEO, POSOCO, India</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- 37 -->
+
+        <!-- Speaker 23: Dr. Tapan Misra -->
         <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
           <div class="inner-box">
             <div class="image-box">
-              <figure class="image"><a href="https://vsi.org.in/"><img src="images/Gupta.png"
-                    alt=""></a></figure>
+              <figure class="image"><a href="https://www.indiaspeakersbureau.in/speakers/tapan-misra/"><img src="images/Tapan-Misra.jpg"
+              alt="Dr. Tapan Misra"></a></figure>
             </div>
             <div class="info-box">
-              <h4 class="name"><a href="https://vsi.org.in/">Dr. Satya Gupta</a></h4>
-              <span class="designation">President, VLSI Socity of India</span>
+              <h4 class="name"><a href="https://www.indiaspeakersbureau.in/speakers/tapan-misra/">Dr. Tapan Misra</a></h4>
+              <span class="designation">DS & Former Director, SAC</span>
             </div>
             <div class="social-box">
               <ul class="social-links social-icon-colored">
-                <li></li>
+          <li></li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- 38 -->
+
+        <!-- Speaker 24: Dr. Ranjan Kr. Behera -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.iitp.ac.in/people-2/ee-faculty/196:view-profile-10"><img src="images/Ranjan1.jpg"
+              alt="Dr. Ranjan Kr. Behera"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.iitp.ac.in/people-2/ee-faculty/196:view-profile-10">Dr. Ranjan Kr. Behera</a></h4>
+              <span class="designation">Indian Institute of Technology (IIT) Patna</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 25: Dr. Arun Kumar Verma -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://www.iitjammu.ac.in/faculty/~arunkumarverma"><img src="images/arunkumarverma.jpeg"
+              alt="Dr. Arun Kumar Verma"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://www.iitjammu.ac.in/faculty/~arunkumarverma">Dr. Arun Kumar Verma</a></h4>
+              <span class="designation">Indian Institute of Technology (IIT) Jammu</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 26: Dr. Pradyumn Chaturvedi -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://vnit.ac.in/engineering/electrical/dr-pradyumn-chaturvedi/"><img src="images/pradyuman.jpg"
+              alt=""></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://vnit.ac.in/engineering/electrical/dr-pradyumn-chaturvedi/">Dr. Pradyumn Chaturvedi</a></h4>
+              <span class="designation">VNIT, Nagpur, India</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 27: Dr. Yogesh Kumar Meena -->
+        <div class="speaker-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image"><a href="https://iitgn.ac.in/faculty/cse/yogesh"><img src="images/yogesh.jpg"
+              alt="Dr. Yogesh Kumar Meena"></a></figure>
+            </div>
+            <div class="info-box">
+              <h4 class="name"><a href="https://iitgn.ac.in/faculty/cse/yogesh">Dr. Yogesh Kumar Meena</a></h4>
+              <span class="designation">IIT Gandhinagar</span>
+            </div>
+            <div class="social-box">
+              <ul class="social-links social-icon-colored">
+          <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+       
         
       </div>
     </div>
