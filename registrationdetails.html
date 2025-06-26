@@ -23,360 +23,362 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- THIS IS FOR NAVBAR SO PLEASE DON'T DO ANYTHING HERE -->
-    <style>
-      body {
-        font-family: 'Oswald', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #ffffff;
+  <!-- THIS IS FOR NAVBAR SO PLEASE DON'T DO ANYTHING HERE -->
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    @keyframes waveMove {
+      0% {
+        transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
       }
-  
-      @keyframes waveMove {
-        0% {
-          transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
-        }
-  
-        25% {
-          transform: translateX(-15px) scaleY(1.03) rotate(180deg) scaleX(-1);
-        }
-  
-        50% {
-          transform: translateX(-30px) scaleY(1.01) rotate(180deg) scaleX(-1);
-        }
-  
-        75% {
-          transform: translateX(-15px) scaleY(1.04) rotate(180deg) scaleX(-1);
-        }
-  
-        100% {
-          transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
-        }
+
+      25% {
+        transform: translateX(-15px) scaleY(1.03) rotate(180deg) scaleX(-1);
       }
-  
-  
-      .navbar-wave {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
+
+      50% {
+        transform: translateX(-30px) scaleY(1.01) rotate(180deg) scaleX(-1);
       }
-  
-      .wave {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 17rem;
-        transform: scaleX(-1);
-        transform: rotate(180deg);
-        pointer-events: none;
-        animation: waveMove 4s infinite;
+
+      75% {
+        transform: translateX(-15px) scaleY(1.04) rotate(180deg) scaleX(-1);
       }
-  
-      /* Stack layers with slight offsets for depth */
-      .wave1 {
-        z-index: 1;
-        opacity: 0.9;
-        animation-delay: 0s;
+
+      100% {
+        transform: translateX(0) scaleY(1.02) rotate(180deg) scaleX(-1);
       }
-  
-      .wave2 {
-        z-index: 2;
-        opacity: 0.7;
-        animation-delay: 1s;
-      }
-  
-      .wave3 {
-        z-index: 3;
-        opacity: 0.6;
-        animation-delay: 2s;
-      }
-  
-  
-      .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        transition: all 0.3s ease;
-        background-color: #dfe5e8;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 20px 5%;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      }
-  
-      .navbar.shrink {
-        padding: 10px 5%;
-      }
-  
-      .logo {
-        width: 9rem;
-        transition: transform 0.4s ease;
-      }
-  
-      .left-logo img {
-        height: auto;
-        width: 10rem;
-      }
-  
-      .right-logo img {
-        height: 10rem;
-        width: auto;
-      }
-  
-      .navbar.shrink .logo {
-        transform: scale(0.8);
-      }
-  
-      /* .logo img {
-          width: 10rem;
-          height: auto;
-        } */
-  
-      .center-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: calc(100% - 200px);
-        flex: 1;
-        transition: all 0.4s ease;
-      }
-  
-      .sponsors {
-        display: flex;
-        gap: 6rem;
-        justify-content: center;
-        margin-bottom: 32px;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        flex-wrap: wrap;
-        border-radius: 5px;
-        animation: fadeSlideIn 1s ease forwards;
-      }
-  
-      .sponsors img {
-        height: 3.5rem;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-      }
-  
-      .sponsors img:hover {
-        transform: scale(1.1);
-      }
-  
-      .menu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        transition: all 0.3s ease;
-      }
-  
-      .menu li {
-        position: relative;
-      }
-  
-      .menu a {
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.5s, transform 0.5s ease;
-        display: inline-block;
-      }
-  
-      .menu a:hover {
-        background-color: #002b5c;
-        /* dark blue */
-        color: #fff;
-        /* white text */
-        transform: scale(1.05);
-      }
-  
-      /* Dropdown styles */
-      .dropdown-content {
-        list-style: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #c4c4c4;
-        border-radius: 8px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        visibility: hidden;
-        transform: perspective(600px) rotateX(-10deg) translateY(10px);
-        transition: all 0.5s ease;
-        transform-origin: top;
-        z-index: 10;
-        min-width: 220px;
-        padding: 10px 0;
-      }
-  
-      .dropdown-content li {
-        padding: 0;
-      }
-  
-      .dropdown-content a {
-        display: block;
-        padding: 10px 20px;
-        font-size: 1.3rem;
-        color: #333;
-        white-space: nowrap;
-        transition: background 0.3s;
-      }
-  
-      .menu a:hover {
-        background-color: #002b5c;
-        /* dark blue */
-        color: #fff;
-        /* white text */
-        transform: scale(1.05);
-      }
-  
-      /* Show dropdown on hover */
-      .menu li.dropdown:hover .dropdown-content {
-        opacity: 1;
-        visibility: visible;
-        transform: perspective(600px) rotateX(0deg) translateY(0);
-      }
-  
-      @keyframes fadeSlideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-  
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-  
-      /* Responsive styles */
-     .burger{
-      display: none;
-     }
-  
-     @media screen and (max-width: 1400px) {
-      .menu{
-        gap: 0px;
-      }
-      .menu a{
-        font-size: 0.9rem;
-      }
-      .sponsors{
-        gap: 2rem;
-      }
-  }
-     @media screen and (max-width: 850px) {
-      .burger{
-        top: 3.7rem;
-        right: 1rem;
-         position: relative;
-        display: block;
-     }
-  
-     .menu {
-      display: flex; /* default is flex so transition works */
-      flex-direction: column;
-      background: white;
-      color: black;
+    }
+
+
+    .navbar-wave {
       position: absolute;
-      top: 7.5rem;
-      right: 1rem;
-      padding: 1rem;
-      border-radius: 10px;
-      z-index: 999;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 103%;
+      height: 13rem;
+      transform: scaleX(-1);
+      transform: rotate(180deg);
       pointer-events: none;
-      transform: scaleY(0);
-      transform-origin: top;
+      animation: waveMove 4s infinite;
+    }
+
+    /* Stack layers with slight offsets for depth */
+    .wave1 {
+      z-index: 1;
+      opacity: 0.9;
+      animation-delay: 0s;
+    }
+
+    .wave2 {
+      z-index: 2;
+      opacity: 0.7;
+      animation-delay: 1s;
+    }
+
+    .wave3 {
+      z-index: 3;
+      opacity: 0.6;
+      animation-delay: 2s;
+    }
+
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background-color: #dfe5e8;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 10px 5%;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar.shrink {
+      padding: 5px 5%;
+    }
+
+    .logo {
+      width: 9rem;
+      transition: transform 0.4s ease;
+    }
+
+    .left-logo img {
+      height: auto;
+      width: 7rem;
+    }
+
+    .right-logo img {
+      height: 7rem;
+      padding-top: 12px;
+      margin-left: 37px;
+      width: auto;
+    }
+
+    .navbar.shrink .logo {
+      transform: scale(0.9);
+    }
+
+    /* .logo img {
+        width: 10rem;
+        height: auto;
+      } */
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: calc(100% - 200px);
+      flex: 1;
+      transition: all 0.4s ease;
+    }
+
+    .sponsors {
+      display: flex;
+      gap: 6rem;
+      justify-content: center;
+      margin-bottom: 32px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      flex-wrap: wrap;
+      border-radius: 5px;
+      animation: fadeSlideIn 1s ease forwards;
+    }
+
+    .sponsors img {
+      height: 3rem;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .sponsors img:hover {
+      transform: scale(1.1);
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
       transition: all 0.3s ease;
     }
-  
-    .menu.menu-active {
-      opacity: 1;
-      pointer-events: auto;
-      transform: scaleY(1);
-    }
-  
+
     .menu li {
       position: relative;
-      margin: 0.5rem 0;
     }
-  
-    .menu .dropdown-content {
-    position: absolute;
-    top: 0;
-    left: -220px; /* Adjust as needed */
-    background-color: #fff;
-    /* padding: 0.5rem 1rem; */
-    border-radius: 8px;
+
+    .menu a {
+      font-size: 1.3rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 5px 16px;
+      border-radius: 5px;
+      transition: background-color 0.5s, transform 0.5s ease;
+      display: inline-block;
+    }
+
+    .menu a:hover {
+      background-color: #002b5c;
+      /* dark blue */
+      color: #fff;
+      /* white text */
+      transform: scale(1.05);
+    }
+
+    /* Dropdown styles */
+    .dropdown-content {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #c4c4c4;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: perspective(600px) rotateX(-10deg) translateY(10px);
+      transition: all 0.5s ease;
+      transform-origin: top;
+      z-index: 10;
+      min-width: 220px;
+      padding: 10px 0;
+    }
+
+    .dropdown-content li {
+      padding: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px 10px;
+      font-size: 1.2rem;
+      color: #333;
+      white-space: nowrap;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #002b5c;
+      /* dark blue */
+      color: #fff;
+      /* white text */
+      transform: scale(1.05);
+    }
+
+    /* Show dropdown on hover */
+    .menu li.dropdown:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: perspective(600px) rotateX(0deg) translateY(0);
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles */
+   .burger{
     display: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    /* min-width: 150px; */
+   }
+
+   @media screen and (max-width: 1400px) {
+    .menu{
+      gap: 0px;
+    }
+    .menu a{
+      font-size: 0.9rem;
+    }
+    .sponsors{
+      gap: 2rem;
+    }
+}
+   @media screen and (max-width: 850px) {
+    .burger{
+      top: 3.7rem;
+      right: 1rem;
+       position: relative;
+      display: block;
+   }
+
+   .menu {
+    display: flex; /* default is flex so transition works */
     flex-direction: column;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 7.5rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease;
   }
-  
-  .menu .dropdown:hover .dropdown-content {
-    display: flex;
+
+  .menu.menu-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scaleY(1);
   }
-  
-  .menu .dropdown-content li {
+
+  .menu li {
+    position: relative;
     margin: 0.5rem 0;
   }
-  
-  
-    /* .burger {
-      display: block;
-      cursor: pointer;
-      z-index: 1000;
-    } */
-  
-    .center-content {
-      display: flex; /* Keep center-content active */
-    }
-  
-    .sponsors {
-      display: none; /* Hide only unwanted items */
-    }
-  
-    .right-logo {
-      display: none;
-    }
-    .hero-sec h1{
-     font-size: x-large;
-    }
-    
-    .about-flex-box{
-     flex-direction: column;
-    }
-    .paragraph{
-       font-size: 1rem;
-     }
-     section h4 {
-       text-align: center;
-       font-size: 2rem;
-       font-weight: 500;
-     }
+
+  .menu .dropdown-content {
+  position: absolute;
+  top: 0;
+  left: -220px; /* Adjust as needed */
+  background-color: #fff;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* min-width: 150px; */
+  flex-direction: column;
+}
+
+.menu .dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.menu .dropdown-content li {
+  margin: 0.5rem 0;
+}
+
+
+  /* .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  } */
+
+  .center-content {
+    display: flex; /* Keep center-content active */
   }
-    </style>
+
+  .sponsors {
+    display: none; /* Hide only unwanted items */
+  }
+
+  .right-logo {
+    display: none;
+  }
+  .hero-sec h1{
+   font-size: x-large;
+  }
+  
+  .about-flex-box{
+   flex-direction: column;
+  }
+  .paragraph{
+     font-size: 1rem;
+   }
+   section h4 {
+     text-align: center;
+     font-size: 2rem;
+     font-weight: 500;
+   }
+}
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 ">
 
@@ -484,135 +486,97 @@
       <div class="container px-5">
           <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
               <div class="col-12 col-lg-12">
-                <div class="styleheading mt-52">
+                <div class="styleheading" style="margin-top: 6.5rem;">
                   <span class="nitish">Registration Details</span>
                 </div>
-                  <div class="row">
-                      <div class="col-12 textAB">
-                          <p>
-                              At least one author of the accepted paper must register with appropriate conference fee to include the paper in the 1ST IEEE ICE2CPT 2025 conference Program and publication in IEEE Xplore.
-                          </p>
-                          <h2 class="display-6 lh-1 mb-4 mt-5">Guidelines</h2>
-                            <ul class="list-disc pl-5 space-y-2">
-                              <li>At least one author of each accepted paper must register on/before 28th AUGUST 2025.
-                              </li>
-                              <li>Unregistered papers will not be included in the final program for presentation and
-                                  publication in IEEE Xplore.</li>
-                              <li>Each full fee registration is entitled to present/publish only one (1) accepted
-                                  paper with maximum of six pages. Extra two pages (i.e. maximum of 8 pages) may be allowed with
-                                  over length page charge of Rs. 1000/$ 18 per page.</li>
-                              <li>Please keep a copy of the Payment Transaction ID, generated by the payment gateway / by your bank. You may need these later in registration process or if you need to track
-                                  your payment/registration.</li>
-                              <li>The paid registration fee is non-refundable.</li>
-                              <li>The eligible authors are requested to provide the scan copy of valid IEEE membership card/Student Institute ID proof during the registration process.</li>
-                              <li>To complete the registration process, the authors must fill the below Google Form by 28.05.2025 (separately for each paper ID) after making the payment. The late
-                                  registration is allowed with 10% extra conference fee till 01.09.2025.</li>
-                              <li>Registering author must refer the category of eligible registration. Please see below the registration fees for different author category.</li>
-                          </ul>
 
-                          <table class="table table-striped mt-4">
-                              <thead>
-                                  <tr style="background-color: #002b5c; color: #dfe5e8;">
-                                      <th scope="col">S.No</th>
-                                      <th scope="col">Category</th>
-                                      <th scope="col">Indian Authors (Virtual Mode)</th>
-                                      <th scope="col">Foreign Authors (Virtual Mode)</th>
-                                      <th scope="col">Indian Authors (Physical Mode)</th>
-                                      <th scope="col">Foreign Authors (Physical Mode)</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr style="background-color: #6dd2fc;">
-                                      <th scope="row">1</th>
-                                      <td>Author Non-IEEE Member</td>
-                                      <td>₹8000</td>
-                                      <td>$330</td>
-                                      <td>₹9000</td>
-                                      <td>$380</td>
-                                  </tr>
-                                  <tr style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row">2</th>
-                                      <td>Author IEEE Member</td>
-                                      <td>₹6500</td>
-                                      <td>$280</td>
-                                      <td>₹7500</td>
-                                      <td>$330</td>
-                                  </tr>
-                                  <tr  style="background-color: #6dd2fc;">
-                                      <th scope="row">3</th>
-                                      <td>Student Non- IEEE Member</td>
-                                      <td>₹6000</td>
-                                      <td>$270</td>
-                                      <td>₹7000</td>
-                                      <td>$330</td>
-                                  </tr>
-                                  <tr style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row">4</th>
-                                      <td>IEEE Student Member </td>
-                                      <td>₹5000</td>
-                                      <td>$220</td>
-                                      <td>₹6000</td>
-                                      <td>$270</td>
-                                  </tr>
-                                  <tr style="background-color: #6dd2fc;">
-                                      <th scope="row">5</th>
-                                      <td>Student Attendee (Non- Author) </td>
-                                      <td>₹2500</td>
-                                      <td>$120</td>
-                                      <td>₹3500</td>
-                                      <td>$170</td>
-                                  </tr>
-                                  <tr  style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row">6</th>
-                                      <td>Professional Attendee (Non- Author)</td>
-                                      <td>₹3000</td>
-                                      <td>$150</td>
-                                      <td>₹4000</td>
-                                      <td>$210</td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                          <ul class="list-disc pl-5 space-y-2">
-                            <li>Rates are inclusive of GST 18%</li>  
-                            <li>Receipt will be provided in the name of registered author only.</li>
-                              <li>Any one of the authors/co-authors can present the accepted paper.</li>
-                              <li>The authors can pay the conference registration fee through NEFT/ RTGS/
-                                  IMPS/ Direct Deposit/ Swift Transfer to the following bank account.</li>
-                          </ul>
-
-                          <table class="table table-striped mt-4">
-                              <tbody>
-                                  <tr style="background-color: #6dd2fc;">
-                                      <th scope="row">Account Name: *</th>
-                                      <td></td>
-                                  </tr>
-                                  <tr style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row">Account Number:</th>
-                                      <td></td>
-                                  </tr>
-                                  <tr style="background-color: #6dd2fc;">
-                                      <th scope="row">Bank Name:</th>
-                                      <td></td>
-                                  </tr>
-                                  <tr style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row">IFSC Code:</th>
-                                      <td></td>
-                                  </tr>
-                                  <tr style="background-color: #6dd2fc;">
-                                      <th scope="row">SWIFT Code:</th>
-                                      <td></td>
-                                  </tr>
-                                  <tr style="background-color: #2480ba; color: whitesmoke;">
-                                      <th scope="row" colspan="2">* Please enter the Account Name as &quot;ICE2CPT
-                                          NITJSR&quot;,
-                                          if the bank replies an error while making the transaction.</th>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
+                  <div style="margin: 40px auto; padding: 25px; background-color: #f0f8ff; border: 2px solid #99ccff; border-radius: 10px; font-family: Arial, sans-serif; color: #003366;">
+                  <p style="line-height: 1.6;">
+                    At least one author of each accepted paper must complete the registration by paying the appropriate conference fee in
+                    order for the paper to be included in the
+                    <strong>1st IEEE International Conference on Electrical, Electronics and Computer Science with Advance Power
+                      Technologies - A Future Trend (ICE2CPT 2025)</strong>
+                    conference program and submitted for publication in <strong>IEEE Xplore</strong>
+                    (<em>subject to compliance with IEEE quality standards and presentation at the conference</em>).
+                  </p>
+                  
+                  <h3 style="margin-top: 30px; color: #004080;">Registration Guidelines</h3>
+                  
+                  <ul style="line-height: 1.8; padding-left: 20px; list-style-type: disc;">
+                    <li><strong>Deadline:</strong> At least one author must register on or before <strong>30th September 2025</strong>.
+                    </li>
+                    <li><strong>Eligibility for IEEE Xplore:</strong> Only registered and presented papers will be considered for
+                      <strong>IEEE Xplore Digital Library</strong>.</li>
+                    <li>Each full registration covers <strong>one (1) paper</strong> with a maximum of <strong>6 pages</strong>.</li>
+                    <li>A maximum of <strong>2 additional pages</strong> can be included with an overlength fee of <strong>₹1000 /
+                        $18</strong> per extra page.</li>
+                    <li><strong>Registration fees are non-refundable</strong> under any circumstances.</li>
+                    <li>Authors must retain a copy of the <strong>payment transaction ID or receipt</strong> for use during the
+                      registration process.</li>
+                    <li>Authors registering under <strong>IEEE Member</strong> or <strong>Student</strong> categories must upload a valid
+                      <strong>IEEE membership card</strong> or <strong>student ID</strong> respectively.</li>
+                    <li>After making the payment, authors must complete the registration by filling out the <strong>Google Registration
+                        Form</strong> (one form per paper ID) by <strong>30th September 2025</strong>.</li>
+                    <li><strong>Late registration</strong> is allowed up to <strong>10th October 2025</strong> with a <strong>10%
+                        additional conference fee</strong>.</li>
+                    <li>The registering author must carefully select the correct category (<strong>IEEE/Non-IEEE, Student/Professional,
+                        Virtual/Physical</strong>) while registering.</li>
+                  </ul>
                   </div>
+
+                  <div style="width: 90%; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f0f8ff; border: 2px solid #99ccff; border-radius: 10px; font-family: Arial, sans-serif;">
+    <h2 style="text-align:center; color:#004080; margin-bottom: 20px;">Conference Registration Fee Payment Details</h2>
+    
+    <table style="border-collapse: collapse; width: 100%; background-color: #e6f2ff; color: #003366; border: 1px solid #b3d1ff;">
+      <tr style="background-color: #cce6ff;">
+        <th style="padding: 10px; text-align: left; border: 1px solid #b3d1ff;">Field</th>
+        <th style="padding: 10px; text-align: left; border: 1px solid #b3d1ff;">Details</th>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Account Name</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">NIT JAMSHEDPUR RESEARCH AND TECHNOLOGY</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Account Number</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">38246478714</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Bank Name</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">State Bank of India</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Branch Name</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">NIT Jamshedpur</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">IFSC Code</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">SBIN0001882</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">MICR Code</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">831002004</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">SWIFT Code</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">SBININBB761</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Institute Address</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">NIT Campus, Adityapur, Jamshedpur, Seraikela-Kharsawan, Jharkhand – 831014</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">Payment Remark (Comment)</td>
+        <td style="padding: 10px; border: 1px solid #b3d1ff;">ICE2CPT_Paper ID (e.g., ICE2CPT_157XXXX)</td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 20px; font-size: 15px; color: #003366; background-color: #d9ecff; padding: 10px 15px; border-left: 5px solid #3399ff;">
+      <strong>Note:</strong> If error, retry or contact your bank.
+    </p>
+  </div>
+
                   <div class="row">
-                      <h2 class="display-6 lh-1 mb-4 mt-5 text-center">Registration Link</h2>
+                      <h2 class="display-6 lh-1 mb-4 text-center">Registration Link</h2>
                   </div>
                   <div class="row textAB">
                       <div class="col-12 text-center">
