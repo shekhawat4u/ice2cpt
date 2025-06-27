@@ -1382,3 +1382,13 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.rightlogo {
+  transition: transform 0.3s ease;
+}
+
+.rightlogo:hover {
+  transform: scale(1.1);
+}
+
+ 
